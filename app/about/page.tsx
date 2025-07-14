@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import Footer from "../components/Footer";
 
@@ -27,7 +26,7 @@ export default function AboutUsPage() {
             <h1 className="text-8xl font-black my-2">SOEDIRMAN</h1>
             <h1 className="text-8xl font-black my-2">ROBOTIC</h1>
             <h1 className="text-8xl font-black my-2">TEAM</h1>
-            <p className="text-xl my-2 italic">"The Future We Make, For The Better Life"</p>
+            <p className="text-xl my-2 italic">&quot;The Future We Make, For The Better Life&quot;</p>
           </div>
         </div>
       </section>

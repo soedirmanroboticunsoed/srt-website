@@ -1,6 +1,5 @@
 // components/Footer.js
 import Link from 'next/link';
-import Image from 'next/image'; // Import Image component if you plan to use next/image for logos
 import { FaInstagram, FaYoutube, FaTiktok, FaSpotify, FaLinkedin, FaGithub } from 'react-icons/fa'; // Example social icons
 
 const Footer = () => {
@@ -20,10 +19,38 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Media</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/konten-edukasi" className="hover:text-white">Konten Edukasi</Link></li>
-              <li><Link href="/robotech" className="hover:text-white">Robotech</Link></li>
-              <li><Link href="/tiktok" className="hover:text-white">Tiktok</Link></li>
-              <li><Link href="/youtube" className="hover:text-white">Youtube</Link></li>
+              <li>
+                <Link
+                  href="https://medium.com/@soedirmanrobotic"
+                  className="hover:text-white"
+                >
+                    Konten Edukasi
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="https://www.tiktok.com/@srtunsoed?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1" 
+                  className="hover:text-white"
+                >
+                  Robotech
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="https://www.tiktok.com/@srtunsoed?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1" 
+                  className="hover:text-white"
+                >
+                  Tiktok
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.youtube.com/@soedirmanroboticteam"
+                  className="hover:text-white"
+                >
+                  Youtube
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -90,17 +117,15 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm">
           <p>&copy; 2025 Soedirman Robotic Team</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-white"><FaInstagram size={20} /></Link>
-            <Link href="#" className="hover:text-white"><FaYoutube size={20} /></Link>
-            <Link href="#" className="hover:text-white"><FaTiktok size={20} /></Link>
-            <Link href="#" className="hover:text-white"><FaSpotify size={20} /></Link>
-            <Link href="#" className="hover:text-white"><FaLinkedin size={20} /></Link>
+            <Link href="https://www.instagram.com/srtunsoed/" className="hover:text-white"><FaInstagram size={20} /></Link>
+            <Link href="https://www.youtube.com/@soedirmanroboticteam" className="hover:text-white"><FaYoutube size={20} /></Link>
+            <Link href="https://www.tiktok.com/@srtunsoed?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1" className="hover:text-white"><FaTiktok size={20} /></Link>
+            <Link href="https://open.spotify.com/show/49Nhx2wMSNFfZfC64O7Wmm?si=658206aaf3c14fa5" className="hover:text-white"><FaSpotify size={20} /></Link>
+            <Link href="https://www.linkedin.com/company/soedirman-robotic-team" className="hover:text-white"><FaLinkedin size={20} /></Link>
             <Link href="#" className="hover:text-white"><FaGithub size={20} /></Link>
             {/* Add other icons or custom SVGs here */}
             <Link href="#" className="hover:text-white">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> {/* Placeholder for last two icons */}
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                </svg>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clip-rule="evenodd"><path d="M19 24h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5v14c0 2.761-2.237 4.999-5 5zm.97-5.649v-.269l-1.247-1.224c-.11-.084-.165-.222-.142-.359v-8.998c-.023-.137.032-.275.142-.359l1.277-1.224v-.269h-4.422l-3.152 7.863-3.586-7.863h-4.638v.269l1.494 1.799c.146.133.221.327.201.523v7.072c.044.255-.037.516-.216.702l-1.681 2.038v.269h4.766v-.269l-1.681-2.038c-.181-.186-.266-.445-.232-.702v-6.116l4.183 9.125h.486l3.593-9.125v7.273c0 .194 0 .232-.127.359l-1.292 1.254v.269h6.274z"/></svg>
             </Link>
             <Link href="#" className="hover:text-white">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

@@ -302,7 +302,7 @@ export default function KriTeamsPage() {
       <section id="title" className="px-5 py-10">
         <div className="flex flex-col items-center justify-center mb-10 gap-2">
           <h1 className="text-8xl font-black my-2">KRI TEAMS</h1>
-          <p className="text-2xl italic">"The Future We Make, For the Better Life"</p>
+          <p className="text-2xl italic">&quot;The Future We Make, For the Better Life&quot;</p>
         </div>
       </section>
       <section id="teamPage">

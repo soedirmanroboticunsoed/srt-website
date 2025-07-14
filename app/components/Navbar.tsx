@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
 
 import {
   NavigationMenu,
@@ -17,25 +16,25 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Konten Edukasi",
-    href: "/docs/primitives/alert-dialog",
+    href: "https://medium.com/@soedirmanrobotic",
     description:
       "Find important and useful information presented in an interesting way.",
   },
   {
     title: "Robotech",
-    href: "/docs/primitives/hover-card",
+    href: "https://www.tiktok.com/@srtunsoed?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1",
     description:
       "Look before you enter! Robotech makes it easy for you to take a quick and convenient peek at tech content.",
   },
   {
     title: "Tiktok",
-    href: "/docs/primitives/progress",
+    href: "https://www.tiktok.com/@srtunsoed?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1",
     description:
       "Keep track of your journey! Watch your progress as you enjoy quick, entertaining content, perfect for staying engaged and on pace.",
   },
   {
     title: "Youtube",
-    href: "/docs/primitives/scroll-area",
+    href: "https://www.youtube.com/@soedirmanroboticteam",
     description: "Discover content with ease! Clean visual separation helps you focus, explore, and enjoy videos without getting lost.",
   },
 ]

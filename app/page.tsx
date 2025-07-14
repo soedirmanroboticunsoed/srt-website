@@ -1,7 +1,5 @@
 'use client';
 
-import Image from "next/image";
-import { DM_Sans } from "next/font/google";
 import { ChevronRight } from "lucide-react";
 import {
   Accordion,
@@ -25,7 +23,7 @@ export default function Home() {
             <h1 className="text-8xl font-black my-2">SOEDIRMAN</h1>
             <h1 className="text-8xl font-black my-2">ROBOTIC</h1>
             <h1 className="text-8xl font-black my-2">TEAM</h1>
-            <p className="text-xl my-2 italic">"The Future We Make, For The Better Life"</p>
+            <p className="text-xl my-2 italic">&quot;The Future We Make, For The Better Life&quot;</p>
           </div>
         </div>
       </section>
