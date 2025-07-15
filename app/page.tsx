@@ -58,7 +58,7 @@ function StatItem({ value, label, icon }: { value: number, label: string, icon: 
 
   useEffect(() => {
     if (isVisible) {
-      let start = 0;
+      const start = 0;
       const end = value;
       if (start === end) return;
 
@@ -474,13 +474,13 @@ export default function Home() {
                 How can we initiate a partnership with your organization?
               </AccordionTrigger>
               <AccordionContent>
-                Absolutely! We're open to various partnership opportunities. For more details, feel free to reach out to us via email at soedirmanrobotic@gmail.com.<br />
+                Absolutely! We&apos;re open to various partnership opportunities. For more details, feel free to reach out to us via email at soedirmanrobotic@gmail.com.<br />
                 <br />
                 You can also contact our Person In Charge through WhatsApp:<br />
                 • Izzat Al Haq: +62 857-1785-3061<br />
                 • Putri Anjune Paradysta: +62 821-7743-5365<br />
                 <br />
-                We'd be thrilled to collaborate with you.
+                We&apos;d be thrilled to collaborate with you.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">

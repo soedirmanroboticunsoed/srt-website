@@ -29,7 +29,7 @@ function StatItem({ value, label, icon }: { value: number, label: string, icon: 
 
   useEffect(() => {
     if (isVisible) {
-      let start = 0;
+      const start = 0;
       const end = value;
       if (start === end) return;
 
@@ -241,7 +241,7 @@ export default function AboutUsPage() {
               </h1>
               {/* Menyesuaikan ukuran font paragraf untuk layar kecil (text-lg) */}
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed italic">
-                "Menjadikan Soedirman Robotic Team sebagai tim robotika yang unggul, berdaya saing tinggi, inspiratif, edukatif dan menjadi pusat Pengembangan Teknologi di Bidang Robotika dan Informasi bagi mahasiswa dan masyarakat sekitar."
+                &quot;Menjadikan Soedirman Robotic Team sebagai tim robotika yang unggul, berdaya saing tinggi, inspiratif, edukatif dan menjadi pusat Pengembangan Teknologi di Bidang Robotika dan Informasi bagi mahasiswa dan masyarakat sekitar.&quot;
               </p>
             </section>
 
