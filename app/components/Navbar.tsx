@@ -1,7 +1,10 @@
 'use client';
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 import {
   NavigationMenu,
@@ -11,7 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -21,154 +24,199 @@ const components: { title: string; href: string; description: string }[] = [
       "Find important and useful information presented in an interesting way.",
   },
   {
-    title: "Robotech",
-    href: "https://www.tiktok.com/@srtunsoed?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1",
+    title: "Instagram",
+    href: "https://www.instagram.com/srtunsoed/",
     description:
-      "Look before you enter! Robotech makes it easy for you to take a quick and convenient peek at tech content.",
+      "Look before you enter! Instagram makes it easy for you to take a quick and convenient peek at tech content.",
   },
   {
     title: "Tiktok",
-    href: "https://www.tiktok.com/@srtunsoed?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1",
+    href: "https://www.tiktok.com/@srtunsoed",
     description:
       "Keep track of your journey! Watch your progress as you enjoy quick, entertaining content, perfect for staying engaged and on pace.",
   },
   {
     title: "Youtube",
     href: "https://www.youtube.com/@soedirmanroboticteam",
-    description: "Discover content with ease! Clean visual separation helps you focus, explore, and enjoy videos without getting lost.",
+    description:
+      "Discover content with ease! Clean visual separation helps you focus, explore, and enjoy videos without getting lost.",
   },
-]
+];
 
-export function NavigationMenuDemo() {
-  return (
-    <nav className="sticky top-0 z-50 bg-black text-white px-8 py-4 flex items-center justify-between border-b-1 border-white">
-      <div className="flex items-center gap-2">
-        <img src="/images/unsoed.png" alt="Logo Unsoed" className="h-10" />
-        <img src="/images/soedirmanrobotic.png" alt="Logo Robotic" className="h-10" />
-        <div>
-          <div className="text-xs font-bold">SOEDIRMAN</div>
-          <div className="text-xs font-bold">ROBOTIC</div>
-          <div className="text-xs font-bold">TEAM</div>
-        </div>
-      </div>
-      <NavigationMenu viewport={false}>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-black p-6 no-underline outline-hidden select-none focus:shadow-md"
-                      href="/about"
-                    >
-                      <img
-                        src="/images/soedirmanrobotic.png"
-                        alt="Soedirman Robotic Team"
-                        className="h-auto w-24 object-cover"
-                      />
-                      <div className="mt-2 text-lg font-medium">
-                        Soedirman Robotic Team
-                      </div>
-                      <p className="text-muted-foreground text-sm leading-tight">
-                        Get to know more about us.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem href="/managementTeam" title="Management Team">
-                  Get to know people behind our management team.
-                </ListItem>
-                <ListItem href="/kri-teams" title="KRI Teams">
-                  Get to know people behind our robotic teams.
-                </ListItem>
-                <ListItem href="/krti-teams" title="KRTI Teams">
-                  Get to know people behind our UAV teams.
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Media</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/docs">Achievements</Link>
+// Komponen helper untuk daftar item menu, agar tidak duplikasi kode
+const MainMenuItems = () => (
+  <>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+          <li className="row-span-3">
+            <NavigationMenuLink asChild>
+              <a
+                className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md"
+                href="/about"
+              >
+                <Image 
+                  src="/images/soedirmanrobotic.png"
+                  alt="Soedirman Robotic Team"
+                  width={60}
+                  height={60}
+                  className="object-cover"
+                />
+                <div className="mt-4 mb-2 text-white text-lg font-medium">
+                  Soedirman Robotic Team
+                </div>
+                <p className="text-sm leading-tight text-gray-400">
+                  Get to know more about us.
+                </p>
+              </a>
             </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Events</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[300px] gap-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="#">
-                      <div className="font-medium">Pengabdian Masyarakat</div>
-                      <div className="text-muted-foreground">
-                        Browse all components in the library.
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link href="#">
-                      <div className="font-medium">Internship</div>
-                      <div className="text-muted-foreground">
-                        Learn how to use the library.
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link href="#">
-                      <div className="font-medium">Open Recruitment</div>
-                      <div className="text-muted-foreground">
-                        Read our latest blog posts.
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-      <button className="border border-white px-4 py-1 rounded hover:bg-white hover:text-black transition text-sm">
-          Sign In
-        </button>
+          </li>
+          <ListItem href="/managementTeam" title="Management Team">
+            Get to know people behind our management team.
+          </ListItem>
+          <ListItem href="/kri-teams" title="KRI Teams">
+            Get to know people behind our robotic teams.
+          </ListItem>
+          <ListItem href="/krti-teams" title="KRTI Teams">
+            Get to know people behind our UAV teams.
+          </ListItem>
+        </ul>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Media</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
+          {components.map((component) => (
+            <ListItem
+              key={component.title}
+              title={component.title}
+              href={component.href}
+            >
+              {component.description}
+            </ListItem>
+          ))}
+        </ul>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+    {/* PERBAIKAN: Menghapus 'legacyBehavior' dan wrapper yang tidak perlu */}
+    <NavigationMenuItem>
+      <Link href="/achievements" className={navigationMenuTriggerStyle()}>
+        Achievements
+      </Link>
+    </NavigationMenuItem>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Events</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <ul className="grid w-[300px] gap-3 p-4">
+            <ListItem href="/events/pengmas" title="Pengabdian Masyarakat">
+                Our community service initiatives and projects.
+            </ListItem>
+            <ListItem href="/events/internship" title="Internship">
+                Information about our internship programs.
+            </ListItem>
+            <ListItem href="/events/oprec" title="Open Recruitment">
+                Join our team! Find out how to apply.
+            </ListItem>
+        </ul>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </>
+);
+
+
+export default function NavigationMenuDemo() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    // Menggunakan backdrop-blur untuk efek transparan yang modern
+    <nav className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm text-white border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          
+          {/* Bagian Kiri: Logo */}
+          <div className="flex items-center gap-2">
+            <Image 
+              src="/images/unsoed.png"
+              alt="Logo Unsoed"
+              width={40}
+              height={40}
+            />
+            <Image 
+              src="/images/soedirmanrobotic.png"
+              alt="Logo Robotic"
+              width={36}
+              height={36}
+            />
+            <div className="hidden sm:block">
+              <div className="text-xs font-bold leading-tight">SOEDIRMAN</div>
+              <div className="text-xs font-bold leading-tight">ROBOTIC</div>
+              <div className="text-xs font-bold leading-tight">TEAM</div>
+            </div>
+          </div>
+
+          {/* Bagian Tengah: Menu untuk Desktop */}
+          <div className="hidden md:flex">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <MainMenuItems />
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+
+          {/* Bagian Kanan: Tombol Sign In & Hamburger */}
+          <div className="flex items-center gap-4">
+            <button className="hidden md:block border border-white px-4 py-1.5 rounded-md hover:bg-white hover:text-black transition-colors text-sm font-medium">
+              Sign In
+            </button>
+            <button
+              className="md:hidden p-2"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Menu untuk Mobile (Collapsible) */}
+        {isOpen && (
+          <div className="md:hidden pb-4">
+            <NavigationMenu orientation="vertical" className="w-full">
+              <NavigationMenuList className="flex flex-col gap-2 w-full">
+                <MainMenuItems />
+                <button className="w-full mt-4 border border-white px-4 py-2 rounded-md hover:bg-white hover:text-black transition-colors text-sm font-medium">
+                  Sign In
+                </button>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+        )}
+      </div>
     </nav>
   );
 }
 
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
   return (
-    <li {...props}>
+    <li>
       <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+        <a
+          ref={ref}
+          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800 text-white focus:bg-gray-800 focus:text-white"
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-gray-400">
             {children}
           </p>
-        </Link>
+        </a>
       </NavigationMenuLink>
     </li>
-  )
-}
-export default NavigationMenuDemo;
+  );
+});
+ListItem.displayName = "ListItem";

@@ -279,7 +279,7 @@ export const metadata = {
 
 export default function KriTeamsPage() {
   return (
-    <main>
+    <main className="min-h-screen bg-gray-900 text-white bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
       <Breadcrumb className="p-8">
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -299,14 +299,18 @@ export default function KriTeamsPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <section id="title" className="px-5 py-10">
-        <div className="flex flex-col items-center justify-center mb-10 gap-2">
-          <h1 className="text-8xl font-black my-2">KRI TEAMS</h1>
-          <p className="text-2xl italic">&quot;The Future We Make, For the Better Life&quot;</p>
+      <section className="py-20 sm:py-24">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl sm:text-8xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">
+            KRI Teams
+          </h2>
+          <p className="mt-4 text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto">
+            The Future We Make, For the Better Life
+          </p>
         </div>
       </section>
       <section id="teamPage">
-        <div className="min-h-screen bg-black text-white px-6 py-16">
+        <div className="min-h-screen text-white px-6">
           {teamData.map((section) => (
             <div key={section.title} className="mb-24 text-center">
               <h2 className="text-4xl font-bold mb-12">{section.title}</h2>
@@ -331,7 +335,7 @@ export default function KriTeamsPage() {
           ))}
         </div>
       </section>
-      <section id="footer" className="px-5 py-10 text-white">
+      <section id="footer" className="text-white">
         <Footer />
       </section>
     </main>

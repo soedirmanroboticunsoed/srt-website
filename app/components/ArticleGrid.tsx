@@ -1,8 +1,6 @@
 // components/ArticleCard.jsx
 import Image from 'next/image'; // Untuk optimasi gambar Next.js
 
-// Data contoh untuk kartu artikel
-// Dalam aplikasi nyata, ini mungkin berasal dari API atau CMS
 const articles = [
   {
     id: 1,
