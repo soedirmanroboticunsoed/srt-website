@@ -27,7 +27,7 @@ const activityPosts: PostItem[] = [
     category: "Edukasi",
     date: "22 Juni 2025",
     imageUrl: "/images/events/workshop.jpg",
-    description: "Membagikan pengetahuan dasar tentang mikrokontroler dan sensor kepada lebih dari 50 mahasiswa baru.",
+    description: "Meningkatkan keterampilan anggota tim melalui workshop internal robotika yang intensif.",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const activityPosts: PostItem[] = [
     category: "Organisasi",
     date: "3 Mei 2025",
     imageUrl: "/images/events/visitasi.jpg",
-    description: "Menghibur dan mengedukasi anak-anak melalui demonstrasi interaktif robot-robot karya tim kami.",
+    description: "Membangun jaringan dan kolaborasi dengan Universitas Muhammadiyah Purwokerto.",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const activityPosts: PostItem[] = [
     category: "Edukasi",
     date: "12-13 Agustus 2024",
     imageUrl: "/images/events/expo.jpg",
-    description: "Suasana di balik layar saat tim bekerja keras menyempurnakan robot untuk kompetisi nasional.",
+    description: "Memperkenalkan inovasi robotika kepada mahasiswa baru Universitas Jenderal Soedirman melalui pameran UKM.",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const activityPosts: PostItem[] = [
     category: "Edukasi",
     date: "23 Agustus 2024",
     imageUrl: "/images/events/openhouse.jpg",
-    description: "Mendapatkan wawasan langsung tentang penerapan robotika di dunia industri manufaktur modern.",
+    description: "Buka kesempatan bagi mahasiswa baru untuk mengenal lebih dekat Soedirman Robotic Team.",
   },
    {
     id: 5,
@@ -63,7 +63,7 @@ const activityPosts: PostItem[] = [
     category: "Organisasi",
     date: "18 Agustus 2024",
     imageUrl: "/images/events/panggihsedulur.jpg",
-    description: "Mencari talenta-talenta baru yang bersemangat untuk bergabung dan berinovasi bersama kami.",
+    description: "Kegiatan silaturahmi antar UKM untuk memperkuat ikatan dan kerjasama.",
   },
    {
     id: 6,
@@ -72,7 +72,7 @@ const activityPosts: PostItem[] = [
     category: "Sosial",
     date: "21 April 2024",
     imageUrl: "/images/events/pengabdian2.jpg",
-    description: "Tes penerbangan perdana drone Biantara V.2 untuk persiapan Kontes Robot Terbang Indonesia.",
+    description: "Pengabdian masyarakat oleh pengurus SRT di SMAN 2 Purbalingga untuk memperkenalkan robotika.",
   },
 ];
 // --- Akhir Data Dummy ---

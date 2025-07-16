@@ -131,11 +131,11 @@ const allTeamMembers: TeamMember[] = [
   { id: 9, name: "Arimbi Sukma Kinanthi", role: "Head of Team Manager", imageUrl: "/images/managementTeam/36.png", team: 'management', socials: { instagram: 'https://www.instagram.com/arimbisukmaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
 
   // Technical Team
-  { id: 6, name: "Muhamad Kelvin Adiyasa", role: "Head of KRAI Blakasutha", imageUrl: "/images/kriTeams/54.png", team: 'technical', socials: { instagram: '#' } },
-  { id: 7, name: "Galuh Agung Wicaksono", role: "Head of KRSRI Satria", imageUrl: "/images/kriTeams/104.png", team: 'technical', socials: { instagram: '#' } },
-  { id: 8, name: "Rizki Nugroho Kurniawan", role: "Head of KRTMI Yudhistira", imageUrl: "/images/kriTeams/119.png", team: 'technical', socials: { instagram: '#' } },
-  { id: 9, name: "Farhan Ibnu Fajar", role: "Head of KRTI Biantara RP", imageUrl: "/images/krtiTeams/86.png", team: 'technical', socials: { instagram: '#' } },
-  { id: 10, name: "Muhammad Nur Bijak Bestari", role: "Head of KRTI Biantara FW", imageUrl: "/images/krtiTeams/102.png", team: 'technical', socials: { instagram: '#' } },
+  { id: 6, name: "Muhamad Kelvin Adiyasa", role: "Head of KRAI Blakasutha", imageUrl: "/images/kriTeams/54.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/kelvinady_/?utm_source=ig_web_button_share_sheet' } },
+  { id: 7, name: "Galuh Agung Wicaksono", role: "Head of KRSRI Satria", imageUrl: "/images/kriTeams/104.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/galuh_agung/?utm_source=ig_web_button_share_sheet' } },
+  { id: 8, name: "Rizki Nugroho Kurniawan", role: "Head of KRTMI Yudishtira", imageUrl: "/images/kriTeams/119.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/rzkink?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { id: 9, name: "Farhan Ibnu Fajar", role: "Head of KRTI Biantara RP", imageUrl: "/images/krtiTeams/86.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/fa.angg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { id: 10, name: "Muhammad Nur Bijak Bestari", role: "Head of KRTI Biantara FW", imageUrl: "/images/krtiTeams/102.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/mnurbijak?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
 ];
 // --- Akhir Data Dummy ---
 
