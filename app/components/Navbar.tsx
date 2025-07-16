@@ -110,13 +110,13 @@ const MainMenuItems = () => (
       <NavigationMenuTrigger>Events</NavigationMenuTrigger>
       <NavigationMenuContent>
         <ul className="grid w-[300px] gap-3 p-4">
-            <ListItem href="/events/pengmas" title="Pengabdian Masyarakat">
+            <ListItem href="/pengmas" title="Our Activities">
                 Our community service initiatives and projects.
             </ListItem>
-            <ListItem href="/events/internship" title="Internship">
+            <ListItem href="/internship" title="Internship">
                 Information about our internship programs.
             </ListItem>
-            <ListItem href="/events/oprec" title="Open Recruitment">
+            <ListItem href="/oprec" title="Open Recruitment">
                 Join our team! Find out how to apply.
             </ListItem>
         </ul>
@@ -138,10 +138,10 @@ export default function NavigationMenuDemo() {
           {/* Bagian Kiri: Logo */}
           <div className="flex items-center gap-2">
             <Image 
-              src="/images/unsoed.png"
+              src="/images/logounsoed.png"
               alt="Logo Unsoed"
-              width={40}
-              height={40}
+              width={42}
+              height={42}
             />
             <Image 
               src="/images/soedirmanrobotic.png"

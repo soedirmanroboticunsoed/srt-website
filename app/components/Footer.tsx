@@ -2,7 +2,7 @@
 
 // components/Footer.js
 import Link from 'next/link';
-import { FaInstagram, FaYoutube, FaTiktok, FaSpotify, FaLinkedin, FaGithub } from 'react-icons/fa'; // Example social icons
+import { FaInstagram, FaYoutube, FaTiktok, FaSpotify, FaLinkedin} from 'react-icons/fa'; // Example social icons
 import Image from 'next/image';
 
 // Nomor WhatsApp tujuan
@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="text-gray-300 py-4">
       <div className="container mx-auto px-8 md:px-4">
         {/* Top Section: Links and Big Thanks To */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-10 pb-10 border-b border-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-5 pb-5 border-b border-gray-700">
           <div>
             <h3 className="text-white font-semibold mb-4">About us</h3>
             <ul className="space-y-2 text-sm">
@@ -68,21 +68,20 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Achievements</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/dokumentasi" className="hover:text-white">Penghargaan</Link></li>
-              <li><Link href="/dokumentasi" className="hover:text-white">Dokumentasi</Link></li>
+              <li><Link href="/achievements" className="hover:text-white">Hall of Fame</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-white font-semibold mb-4">Events</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/pengabdian-masyarakat" className="hover:text-white">Pengabdian Masyarakat</Link></li>
+              <li><Link href="/pengmas" className="hover:text-white">Our Activities</Link></li>
               <li><Link href="/internship" className="hover:text-white">Internship</Link></li>
-              <li><Link href="/open-recruitment" className="hover:text-white">Open Recruitment</Link></li>
+              <li><Link href="/oprec" className="hover:text-white">Open Recruitment</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-white font-semibold mb-4">Big Thanks to:</h3>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               {/* Replace with actual Image components or img tags */}
               <Image
                 src="/images/robosoedwear.png"
@@ -91,9 +90,15 @@ const Footer = () => {
                 height={48}
               />
               <Image
-                src="/images/gudangbotol.png" 
+                src="/images/logooemah.jpg"
                 alt="Sponsor 2"
-                width={48}
+                width={40}
+                height={40}
+              />
+              <Image
+                src="/images/smartfren.png"
+                alt="Sponsor 3"
+                width={108}
                 height={48}
               />
             </div>
@@ -106,7 +111,7 @@ const Footer = () => {
             {/* Replace with your actual logo */}
             <div className="flex items-center gap-2">
                 <Image 
-                  src="/images/unsoed.png"
+                  src="/images/logounsoed.png"
                   alt="Logo Unsoed"
                   height={42}
                   width={42}
@@ -136,7 +141,7 @@ const Footer = () => {
             <div>
                 <h3 className="text-white font-semibold mb-2">SOEDIRMAN ROBOTIC TEAM</h3>
                 <p className="text-sm mb-4">
-                We’re a group of students with ambitions to be the winner of Kontes Robot Indonesia (KRI) and Kontes Robot Terbang Indonesia (KRTI).
+                We&apos;re a group of students with ambitions to be the winner of Kontes Robot Indonesia (KRI) and Kontes Robot Terbang Indonesia (KRTI).
                 </p>
             </div>
           </div>
@@ -156,7 +161,6 @@ const Footer = () => {
             <Link href="https://www.tiktok.com/@srtunsoed?ug_source=op.auth&ug_term=Linktr.ee&utm_source=awyc6vc625ejxp86&utm_campaign=tt4d_profile_link&_r=1" className="hover:text-white"><FaTiktok size={20} /></Link>
             <Link href="https://open.spotify.com/show/49Nhx2wMSNFfZfC64O7Wmm?si=658206aaf3c14fa5" className="hover:text-white"><FaSpotify size={20} /></Link>
             <Link href="https://www.linkedin.com/company/soedirman-robotic-team" className="hover:text-white"><FaLinkedin size={20} /></Link>
-            <Link href="#" className="hover:text-white"><FaGithub size={20} /></Link>
           </div>
         </div>
       </div>

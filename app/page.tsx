@@ -99,7 +99,7 @@ type Sponsor = {
 const sponsors: Sponsor[] = [
   { name: "Robosoed Wear", logoUrl: "/images/robosoedwear.png", websiteUrl: "#" },
   { name: "Smartfren", logoUrl: "/images/smartfren.png", websiteUrl: "#" },
-  { name: "Rumah Arimbi", logoUrl: "/images/oemahArimbi.jpg", websiteUrl: "#" },
+  { name: "Rumah Arimbi", logoUrl: "/images/logooemah.jpg", websiteUrl: "#" },
 ];
 // --- Akhir Data Dummy ---
 
@@ -111,24 +111,24 @@ type TeamMember = {
   imageUrl: string;
   team: 'management' | 'technical';
   socials?: {
-    linkedin?: string;
-    github?: string;
-    instagram?: string;
+  linkedin?: string;
+  github?: string;
+  instagram?: string;
   };
 };
 
 // --- DATA DUMMY: Ganti dengan data tim kamu ---
 const allTeamMembers: TeamMember[] = [
   // Management Team
-  { id: 1, name: "Muhammad Rizqy Maulana Sarwono", role: "President", imageUrl: "/images/managementTeam/2.png", team: 'management', socials: { instagram: '#' } },
-  { id: 2, name: "Adhe Akbar Azanni", role: "Vice President", imageUrl: "/images/managementTeam/3.png", team: 'management', socials: { instagram: '#' } },
-  { id: 3, name: "Khoirunnisaa", role: "Head of Secretary", imageUrl: "/images/managementTeam/4.png", team: 'management', socials: { instagram: '#' } },
-  { id: 4, name: "Khaerani Julieta Faestri", role: "Head of Financial Manager", imageUrl: "/images/managementTeam/7.png", team: 'management', socials: { instagram: '#' } },
-  { id: 5, name: "Ramania Nur Alifa", role: "Head of Human Resource Development", imageUrl: "/images/managementTeam/20.png", team: 'management', socials: { instagram: '#' } },
-  { id: 6, name: "Farizza Ginna Zakkiya", role: "Head of Public Relation", imageUrl: "/images/managementTeam/47.png", team: 'management', socials: { instagram: '#' } },
-  { id: 7, name: "Rizka Nur Febriana", role: "Head of Sponsorship", imageUrl: "/images/managementTeam/28.png", team: 'management', socials: { instagram: '#' } },
-  { id: 8, name: "Amanda Jovita Ardellya", role: "Head of Creative Media", imageUrl: "/images/managementTeam/11.png", team: 'management', socials: { instagram: '#' } },
-  { id: 9, name: "Arimbi Sukma Kinanthi", role: "Head of Team Manager", imageUrl: "/images/managementTeam/36.png", team: 'management', socials: { instagram: '#' } },
+  { id: 1, name: "Muhammad Rizqy Maulana Sarwono", role: "President", imageUrl: "/images/managementTeam/2.png", team: 'management', socials: { instagram: 'https://www.instagram.com/rizqysarwono13?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { id: 2, name: "Adhe Akbar Azanni", role: "Vice President", imageUrl: "/images/managementTeam/3.png", team: 'management', socials: { instagram: 'https://www.instagram.com/kangmas_akbar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { id: 3, name: "Khoirunnisaa", role: "Head of Secretary", imageUrl: "/images/managementTeam/4.png", team: 'management', socials: { instagram: 'https://www.instagram.com/niskhr_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { id: 4, name: "Khaerani Julieta Faestri", role: "Head of Financial Manager", imageUrl: "/images/managementTeam/7.png", team: 'management', socials: { instagram: 'https://www.instagram.com/khaeranijulieta/?utm_source=ig_web_button_share_sheet' } },
+  { id: 5, name: "Ramania Nur Alifa", role: "Head of Human Resource Development", imageUrl: "/images/managementTeam/20.png", team: 'management', socials: { instagram: 'https://www.instagram.com/rnalifaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { id: 6, name: "Farizza Ginna Zakkiya", role: "Head of Public Relation", imageUrl: "/images/managementTeam/47.png", team: 'management', socials: { instagram: 'https://www.instagram.com/fafakiyya/?utm_source=ig_web_button_share_sheet' } },
+  { id: 7, name: "Rizka Nur Febriana", role: "Head of Sponsorship", imageUrl: "/images/managementTeam/28.png", team: 'management', socials: { instagram: 'https://www.instagram.com/bubkcart?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { id: 8, name: "Amanda Jovita Ardellya", role: "Head of Creative Media", imageUrl: "/images/managementTeam/11.png", team: 'management', socials: { instagram: 'https://www.instagram.com/amndaata?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { id: 9, name: "Arimbi Sukma Kinanthi", role: "Head of Team Manager", imageUrl: "/images/managementTeam/36.png", team: 'management', socials: { instagram: 'https://www.instagram.com/arimbisukmaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
 
   // Technical Team
   { id: 6, name: "Muhamad Kelvin Adiyasa", role: "Head of KRAI Blakasutha", imageUrl: "/images/kriTeams/54.png", team: 'technical', socials: { instagram: '#' } },
@@ -209,15 +209,15 @@ const achievementsData: Achievement[] = [
     date: "July 8, 2025",
     category: "KRAI - Blakasutha",
     title: "16 Besar KRAI Nasional 2025",
-    description: "Meraih posisi 16 besar dalam Kontes Robot Abu Indonesia (KRAI) 2025 dengan robot Blakasutha yang lincah dan presisi.",
-    imageUrl: "/images/krai-2025.jpg",
+    description: "Meraih posisi 16 besar dalam Kontes Robot ABU Indonesia (KRAI) 2025 dengan robot Blakasutha yang lincah dan presisi.",
+    imageUrl: "/images/krai.jpg",
   },
   {
     id: 2,
     date: "2024",
     category: "KRSRI - Satria",
     title: "Lolos	Kontes Robot Nasional 2024",
-    description: "Robot Satria kami diakui memiliki desain mekanik paling inovatif dan efisien di Kontes Robot Seni Tari Indonesia.",
+    description: "Lolos dalam Kontes Robot SAR Indonesia (KRSRI) 2024 dengan robot Satria yang inovatif dan efisien.",
     imageUrl: "/images/krsri-2024.jpg",
   },
   {
@@ -225,7 +225,7 @@ const achievementsData: Achievement[] = [
     date: "2024",
     category: "KRTI - Biantara",
     title: "Lolos	Kontes Robot Terbang Nasional 2024",
-    description: "Robot terbang Biantara menunjukkan performa luar biasa dalam Kontes Robot Terbang Indonesia, mengamankan posisi kedua.",
+    description: "Meraih posisi untuk lolos ke Kontes Robot Terbang Indonesia (KRTI) 2024 dengan robot Biantara yang terbang tinggi.",
     imageUrl: "/images/articles/robot7.jpg",
   },
   {
@@ -233,8 +233,8 @@ const achievementsData: Achievement[] = [
     date: "2023",
     category: "KRTMI - Yudhistira",
     title: "16	Besar	Pada Kontes Robot Indonesia Tingkat Nasional 2023",
-    description: "Dominasi dalam kompetisi internal universitas, menunjukkan kecepatan dan akurasi robot line follower kami.",
-    imageUrl: "/images/articles/robot4.jpg",
+    description: "Berhasil masuk 16 besar dalam Kontes Robot Tematik Indonesia (KRTMI) 2023 dengan robot Yudhistira yang inovatif.",
+    imageUrl: "/images/krtmi.jpg",
   },
 ];
 // --- Akhir Data Dummy ---
@@ -511,7 +511,6 @@ export default function Home() {
           </Accordion>
         </div>
       </section>
-
       <section id="footer" className="text-white">
         <Footer />
       </section>

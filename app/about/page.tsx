@@ -88,27 +88,27 @@ const missionData = [
   {
     icon: <BrainCircuit size={36} />,
     title: "Forum Riset & Pengembangan",
-    description: "Menjadi wadah riset ilmiah dan pengembangan di bidang robotika bagi mahasiswa yang tergabung dalam organisasi."
+    description: "Menjadi wadah penelitian ilmu bidang robotika dan pengembangan mahasiswa yang tergabung dalam organisasi."
   },
   {
     icon: <BookOpen size={36} />,
     title: "Pelatihan & Edukasi",
-    description: "Menyelenggarakan pelatihan dan pendidikan untuk mengaplikasikan ilmu di bidang robotika kepada mahasiswa dan masyarakat sekitar."
+    description: "Mengadakan pelatihan dan pendidikan guna mengaplikasikan ilmu bidang robotika  kepada mahasiswa dan masyarakat sekitar."
   },
   {
     icon: <Users size={36} />,
     title: "Hubungan Eksternal",
-    description: "Membangun hubungan baik dengan alumni, masyarakat, dan institusi di luar."
+    description: "Menjalin hubungan baik dengan alumni, masyarakat dan lembaga luar."
   },
   {
     icon: <Trophy size={36} />,
     title: "Peran Aktif Kompetisi",
-    description: "Berperan aktif dalam berbagai kompetisi, khususnya di bidang Robotika."
+    description: "Berperan aktif dalam berbagai ajang perlombaan khususnya robotika."
   },
   {
     icon: <Shield size={36} />,
     title: "Landasan Nilai Luhur",
-    description: "Menjunjung tinggi nilai-nilai religius, toleransi, dan Tri Dharma Perguruan Tinggi sebagai landasan utama."
+    description: "Menjunjung tinggi nilai-nilai agama, toleransi dan Tri Dharma Perguruan Tinggi sebagai landasan utama."
   }
 ];
 
@@ -241,7 +241,7 @@ export default function AboutUsPage() {
               </h1>
               {/* Menyesuaikan ukuran font paragraf untuk layar kecil (text-lg) */}
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed italic">
-                &quot;Menjadikan Soedirman Robotic Team sebagai tim robotika yang unggul, berdaya saing tinggi, inspiratif, edukatif dan menjadi pusat Pengembangan Teknologi di Bidang Robotika dan Informasi bagi mahasiswa dan masyarakat sekitar.&quot;
+                &quot;Menjadikan UKM Soedirman Robotic Team sebagai tim robotika yang unggul, berdaya saing tinggi, inspiratif, edukatif dan menjadi pusat pengembangan teknologi di bidang robotika dan informasi bagi mahasiswa serta masyarakat sekitar.&quot;
               </p>
             </section>
 
