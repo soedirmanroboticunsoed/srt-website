@@ -6,15 +6,6 @@ import Footer from "../components/Footer";
 import { BrainCircuit, BookOpen, Users, Trophy, Shield, ArrowRight, ArrowLeft, Award, Bot } from 'lucide-react';
 import { ReactNode, useEffect, useRef, useState, MouseEvent } from 'react';
 
-// Nomor WhatsApp tujuan
-const whatsappNumber = "6285727259202";
-
-// Pesan otomatis (opsional)
-const message = "Halo, saya tertarik untuk menghubungi Soedirman Robotic Team.";
-
-// Encode pesan agar aman untuk URL
-const encodedMessage = encodeURIComponent(message);
-
 // Ganti path ini dengan path ke logo tim kamu (dari gambar yang baru)
 const teamLogoPath = '/images/soedirmanrobotic.png'; 
 
@@ -175,9 +166,8 @@ export default function AboutUsPage() {
               </div>
               
               <Link
-                href={`https://wa.me/${whatsappNumber}?text=${encodedMessage}`}
+                href="/contact"
                 target="_blank" // Membuka di tab baru
-                rel="noopener noreferrer" // Praktik keamanan untuk link eksternal
                 className="inline-flex items-center gap-2 px-8 py-3 bg-cyan-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20
                               transition-all duration-300 ease-in-out
                               hover:bg-cyan-600 hover:shadow-xl hover:shadow-cyan-500/30

@@ -12,15 +12,6 @@ import {
 
 import Footer from './components/Footer';
 
-// Nomor WhatsApp tujuan
-const whatsappNumber = "6285727259202";
-
-// Pesan otomatis (opsional)
-const message = "Halo, saya tertarik untuk menghubungi Soedirman Robotic Team.";
-
-// Encode pesan agar aman untuk URL
-const encodedMessage = encodeURIComponent(message);
-
 // Ganti dengan path ke logo tim kamu
 const teamLogoPath = '/images/soedirmanrobotic.png'; 
 
@@ -336,9 +327,8 @@ export default function Home() {
               
               <div className="mt-8">
                 <a 
-                  href={`https://wa.me/${whatsappNumber}?text=${encodedMessage}`}
+                  href="/contact" // Ganti dengan path halaman kontak
                   target="_blank" // Membuka di tab baru
-                  rel="noopener noreferrer" // Praktik keamanan untuk link eksternal
                   className="inline-flex items-center gap-2 px-8 py-3 bg-cyan-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20
                             transition-all duration-300 ease-in-out
                             hover:bg-cyan-600 hover:shadow-xl hover:shadow-cyan-500/30

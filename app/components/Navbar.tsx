@@ -129,9 +129,6 @@ const MainMenuItems = () => (
 export default function NavigationMenuDemo() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Ganti dengan nomor telepon yang dituju (format internasional)
-  const whatsappNumber = "6285727259202";
-
   return (
     // Menggunakan backdrop-blur untuk efek transparan yang modern
     <nav className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm text-white border-b border-gray-800">
@@ -172,9 +169,8 @@ export default function NavigationMenuDemo() {
           <div className="flex items-center gap-4">
             {/* PERBAIKAN: Mengganti <Link> dengan <a> dan menggunakan href="tel:..." */}
             <a
-              href={`https://wa.me/${whatsappNumber}`}
+              href="/contact"
               target="_blank"
-              rel="noopener noreferrer"
               className="hidden md:block border border-cyan-400 bg-cyan-500/10 text-cyan-300 px-4 py-1.5 rounded-md hover:bg-cyan-500/20 hover:border-cyan-300 transition-colors text-sm font-medium">
               Contact Us
             </a>
@@ -196,9 +192,8 @@ export default function NavigationMenuDemo() {
                 <MainMenuItems />
                 {/* PERBAIKAN: Mengganti <Link> dengan <a> untuk Mobile */}
                 <a 
-                  href={`https://wa.me/${whatsappNumber}`} 
+                  href="/contact"
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="w-full mt-4 bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600 transition-colors text-sm font-medium text-center text-white">
                   Contact Us
                 </a>

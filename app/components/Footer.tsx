@@ -5,15 +5,6 @@ import Link from 'next/link';
 import { FaInstagram, FaYoutube, FaTiktok, FaSpotify, FaLinkedin} from 'react-icons/fa'; // Example social icons
 import Image from 'next/image';
 
-// Nomor WhatsApp tujuan
-const whatsappNumber = "6285727259202";
-
-// Pesan otomatis (opsional)
-const message = "Halo, saya tertarik untuk menghubungi Soedirman Robotic Team.";
-
-// Encode pesan agar aman untuk URL
-const encodedMessage = encodeURIComponent(message);
-
 const Footer = () => {
   return (
     <footer className="text-gray-300 py-4">
@@ -146,7 +137,7 @@ const Footer = () => {
             </div>
           </div>
           <button
-            onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank')} 
+            onClick={() => window.open(`/contact`, '_blank')}
             className="border border-white text-white py-2 px-6 rounded-full hover:bg-white h-12 w-full hover:text-black transition-colors">
               Get in Touch
           </button>
