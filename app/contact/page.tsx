@@ -22,7 +22,7 @@ type ContactCardProps = {
 const contactData = [
   {
     platform: "Instagram",
-    username: "@soedirmanrobotic",
+    username: "@srtunsoed",
     linkText: "Klik untuk mengikuti",
     href: "https://www.instagram.com/srtunsoed/",
     icon: <FaInstagram size={32} />,

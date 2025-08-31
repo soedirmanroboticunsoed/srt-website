@@ -47,6 +47,11 @@ const components: { title: string; href: string; description: string }[] = [
 const MainMenuItems = () => (
   <>
     <NavigationMenuItem>
+      <Link href="/" className={navigationMenuTriggerStyle()}>
+        Home
+      </Link>
+    </NavigationMenuItem>
+    <NavigationMenuItem>
       <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
       <NavigationMenuContent>
         <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -124,7 +129,6 @@ const MainMenuItems = () => (
     </NavigationMenuItem>
   </>
 );
-
 
 export default function NavigationMenuDemo() {
   const [isOpen, setIsOpen] = useState(false);

@@ -33,11 +33,11 @@ export default function ComingSoonPageSimple() {
             {/* Tombol Back to Home */}
             <div className="transition-all duration-1000 delay-700">
                 <Link 
-                    href="/" 
+                    href="/internship" 
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-gray-600 text-gray-300 font-semibold rounded-md transition-all duration-300 ease-in-out hover:bg-gray-800 hover:text-white hover:border-gray-500"
                 >
                 <ArrowLeft size={18} />
-                    Back to Home
+                    Go to Internship Page
                 </Link>
             </div>
         </div>

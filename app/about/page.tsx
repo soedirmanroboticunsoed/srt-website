@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import { BrainCircuit, BookOpen, Users, Trophy, Shield, ArrowRight, ArrowLeft, Award, Bot } from 'lucide-react';
+import { BrainCircuit, BookOpen, Users, Trophy, Shield, ArrowRight, Award, Bot } from 'lucide-react';
 import { ReactNode, useEffect, useRef, useState, MouseEvent } from 'react';
 
 // Ganti path ini dengan path ke logo tim kamu (dari gambar yang baru)
@@ -168,11 +168,8 @@ export default function AboutUsPage() {
               <Link
                 href="/contact"
                 target="_blank" // Membuka di tab baru
-                className="inline-flex items-center gap-2 px-8 py-3 bg-cyan-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20
-                              transition-all duration-300 ease-in-out
-                              hover:bg-cyan-600 hover:shadow-xl hover:shadow-cyan-500/30
-                              transform hover:-translate-y-1">
-                Contact Us
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-b from-cyan-300 to-blue-500 text-white font-bold rounded-lg shadow-lg shadow-cyan-500/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105">
+                  Contact Us
                 <ArrowRight size={20} />
               </Link>
             </div>
@@ -192,10 +189,7 @@ export default function AboutUsPage() {
                 Soedirman Robotic Team is a student organization at Jenderal Soedirman University which is engaged in robotics research and student development in the organization.
               </p>
               {/* Tombol Call-to-Action*/}
-              <Link href="/managementTeam" className="inline-flex items-center gap-2 px-8 py-3 bg-cyan-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20
-                              transition-all duration-300 ease-in-out
-                              hover:bg-cyan-600 hover:shadow-xl hover:shadow-cyan-500/30
-                              transform hover:-translate-y-1">
+              <Link href="/managementTeam" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-b from-cyan-300 to-blue-500 text-white font-bold rounded-lg shadow-lg shadow-cyan-500/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105">
                 Meet Our Team
                 <ArrowRight size={20} />
               </Link>
@@ -220,52 +214,44 @@ export default function AboutUsPage() {
         </div>
       </section>
       <section className="flex flex-col items-center justify-center space-y-12 px-5 py-10">
-          {/* Mengurangi padding vertikal di layar kecil (py-16) dan memperbesarnya di layar lebih besar (sm:py-20) */}
-          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-12">
-            {/* === Bagian Visi === */}
-            {/* Mengurangi margin bawah di layar kecil (mb-20) */}
-            <section className="text-center mb-20 md:mb-24">
-              {/* Menyesuaikan ukuran font judul untuk layar kecil (text-4xl) */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">
-                Vision
-              </h1>
-              {/* Menyesuaikan ukuran font paragraf untuk layar kecil (text-lg) */}
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed italic">
-                &quot;Menjadikan UKM Soedirman Robotic Team sebagai tim robotika yang unggul, berdaya saing tinggi, inspiratif, edukatif dan menjadi pusat pengembangan teknologi di bidang robotika dan informasi bagi mahasiswa serta masyarakat sekitar.&quot;
-              </p>
-            </section>
+        {/* Mengurangi padding vertikal di layar kecil (py-16) dan memperbesarnya di layar lebih besar (sm:py-20) */}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-12">
+          {/* === Bagian Visi === */}
+          {/* Mengurangi margin bawah di layar kecil (mb-20) */}
+          <section className="text-center mb-20 md:mb-24">
+            {/* Menyesuaikan ukuran font judul untuk layar kecil (text-4xl) */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">
+              Vision
+            </h1>
+            {/* Menyesuaikan ukuran font paragraf untuk layar kecil (text-lg) */}
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed italic">
+              &quot;Menjadikan UKM Soedirman Robotic Team sebagai tim robotika yang unggul, berdaya saing tinggi, inspiratif, edukatif dan menjadi pusat pengembangan teknologi di bidang robotika dan informasi bagi mahasiswa serta masyarakat sekitar.&quot;
+            </p>
+          </section>
 
-            {/* === Bagian Misi === */}
-            <section>
-              {/* Menyesuaikan ukuran font judul dan margin bawah untuk layar kecil */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 md:mb-16 text-center tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">
-                Missions
-              </h2>
-              
-              {/* Grid ini sudah responsif secara default (1 kolom di HP, 2 di tablet, 3 di desktop) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {missionData.map((mission, index) => (
-                  <MissionCard 
-                    key={index} 
-                    icon={mission.icon} 
-                    title={mission.title}
-                    // Menambahkan delay animasi yang berbeda untuk setiap kartu
-                    animationDelay={index * 150} 
-                  >
-                    {mission.description}
-                  </MissionCard>
-                ))}
-              </div>
-            </section>
-          </main>
-
-        <Link href="/" className="inline-flex items-center gap-2 px-8 py-3 bg-cyan-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20
-                              transition-all duration-300 ease-in-out
-                              hover:bg-cyan-600 hover:shadow-xl hover:shadow-cyan-500/30
-                              transform hover:-translate-y-1">
-          <ArrowLeft size={20} />
-          Back to Home
-        </Link>
+          {/* === Bagian Misi === */}
+          <section>
+            {/* Menyesuaikan ukuran font judul dan margin bawah untuk layar kecil */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 md:mb-16 text-center tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">
+              Missions
+            </h2>
+            
+            {/* Grid ini sudah responsif secara default (1 kolom di HP, 2 di tablet, 3 di desktop) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {missionData.map((mission, index) => (
+                <MissionCard 
+                  key={index} 
+                  icon={mission.icon} 
+                  title={mission.title}
+                  // Menambahkan delay animasi yang berbeda untuk setiap kartu
+                  animationDelay={index * 150} 
+                >
+                  {mission.description}
+                </MissionCard>
+              ))}
+            </div>
+          </section>
+        </main>
       </section>
       <section id="footer" className="pt-10 text-white">
         <Footer />

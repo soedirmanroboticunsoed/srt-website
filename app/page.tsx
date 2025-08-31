@@ -201,7 +201,7 @@ const achievementsData: Achievement[] = [
     category: "KRAI - Blakasutha",
     title: "16 Besar KRAI Nasional 2025",
     description: "Meraih posisi 16 besar dalam Kontes Robot ABU Indonesia (KRAI) 2025 dengan robot Blakasutha yang lincah dan presisi.",
-    imageUrl: "/images/krai.jpg",
+    imageUrl: "/images/krai.webp",
   },
   {
     id: 2,
@@ -209,7 +209,7 @@ const achievementsData: Achievement[] = [
     category: "KRSRI - Satria",
     title: "Lolos	Kontes Robot Nasional 2024",
     description: "Lolos dalam Kontes Robot SAR Indonesia (KRSRI) 2024 dengan robot Satria yang inovatif dan efisien.",
-    imageUrl: "/images/krsri-2024.jpg",
+    imageUrl: "/images/krsri-2024.webp",
   },
   {
     id: 3,
@@ -217,7 +217,7 @@ const achievementsData: Achievement[] = [
     category: "KRTI - Biantara",
     title: "Lolos	Kontes Robot Terbang Nasional 2024",
     description: "Meraih posisi untuk lolos ke Kontes Robot Terbang Indonesia (KRTI) 2024 dengan robot Biantara yang terbang tinggi.",
-    imageUrl: "/images/articles/robot7.jpg",
+    imageUrl: "images/articles/robot7.webp",
   },
   {
     id: 4,
@@ -225,7 +225,7 @@ const achievementsData: Achievement[] = [
     category: "KRTMI - Yudhistira",
     title: "16	Besar	Pada Kontes Robot Indonesia Tingkat Nasional 2023",
     description: "Berhasil masuk 16 besar dalam Kontes Robot Tematik Indonesia (KRTMI) 2023 dengan robot Yudhistira yang inovatif.",
-    imageUrl: "/images/krtmi.jpg",
+    imageUrl: "/images/krtmi.webp",
   },
 ];
 // --- Akhir Data Dummy ---
@@ -289,9 +289,7 @@ export default function Home() {
   const filteredMembers = allTeamMembers.filter(member => member.team === activeTab);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white 
-                  bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] 
-                  bg-[size:14px_24px]">
+    <div className="min-h-screen bg-gray-900 text-white bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
       <section>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16">
@@ -329,10 +327,7 @@ export default function Home() {
                 <a 
                   href="/contact" // Ganti dengan path halaman kontak
                   target="_blank" // Membuka di tab baru
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-cyan-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20
-                            transition-all duration-300 ease-in-out
-                            hover:bg-cyan-600 hover:shadow-xl hover:shadow-cyan-500/30
-                            transform hover:-translate-y-1"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-b from-cyan-300 to-blue-500 text-white font-bold rounded-lg shadow-lg shadow-cyan-500/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105"
                 >
                     Contact Us
                   <ArrowRight size={20} />
