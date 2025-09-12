@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, Instagram } from 'lucide-react';
+import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit } from 'lucide-react';
 import Footer from '../components/Footer';
 
 // --- DATA UNTUK ALUR PENDAFTARAN ---
@@ -74,7 +74,6 @@ export default function OpenRecruitmentPage() {
 
   // --- PENGATURAN: Ganti link dan nomor kontak di bawah ini ---
   const registrationLink = "https://forms.gle/your-google-form-link";
-  const instagramLink = "https://www.instagram.com/srtunsoed/";
   const contactPerson = {
       name: "Abir Nuchiyah",
       whatsappNumber: "62881023049913"
@@ -145,26 +144,26 @@ export default function OpenRecruitmentPage() {
                 <CheckSquare size={32} className="text-blue-300" />
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-                Pendaftaran Ditutup
+                Pengumuman Hasil Seleksi
               </h1>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
                 Terima Kasih untuk 158 Pendaftar!
               </h2>
               <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
-                Periode pendaftaran untuk Internship Soedirman Robotic Team 2025 telah berakhir. Kami mengucapkan terima kasih atas antusiasme luar biasa dari seluruh pendaftar.
+                Terima kasih kepada seluruh pendaftar atas antusiasme dan partisipasinya. Proses seleksi telah selesai dan kami sangat terkesan dengan kualitas serta semangat yang ditunjukkan oleh semua calon anggota.
               </p>
               <div className="mt-8 max-w-xl mx-auto bg-white/10 backdrop-blur-sm p-4 rounded-lg text-gray-200">
-                <p>Bagi yang sudah mendaftar, harap tunggu informasi selanjutnya yang akan kami umumkan melalui website Soedirman Robotic Team.</p>
+                <p>Bagi yang sudah mendaftar, silahkan klik tombol dibawah untuk melihat pengumuman hasil seleksi Internship Soedirman Robotic Team 2025. Good luck guys!!</p>
               </div>
               <div className="mt-10">
                 <a 
-                  href={instagramLink}
+                  href='/announcement'
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-b from-cyan-400 to-blue-600 text-white font-bold rounded-lg shadow-lg shadow-blue-500/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-blue-500/30 transform hover:scale-105"
                 >
-                  <Instagram size={18} />
-                  Ikuti Kami untuk Info Selanjutnya
+                  <ClipboardEdit size={18} />
+                  Lihat Pengumuman Hasil Seleksi
                 </a>
               </div>
             </>
