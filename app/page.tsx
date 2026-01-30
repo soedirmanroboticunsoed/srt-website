@@ -9,13 +9,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import Marquee from "react-fast-marquee";
 import Footer from './components/Footer';
 
-// Ganti dengan path ke logo tim kamu
 const teamLogoPath = '/images/soedirmanrobotic.png'; 
 
-// --- Custom Hook untuk mendeteksi visibilitas elemen ---
 function useIsVisible(ref: React.RefObject<HTMLDivElement | null>) {
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -25,7 +23,7 @@ function useIsVisible(ref: React.RefObject<HTMLDivElement | null>) {
         setIntersecting(true);
         observer.disconnect();
       }
-    }, { threshold: 0.2 }); // Anggap terlihat jika 20% elemen masuk layar
+    }, { threshold: 0.2 });
 
     if (ref.current) {
       observer.observe(ref.current);
@@ -41,7 +39,6 @@ function useIsVisible(ref: React.RefObject<HTMLDivElement | null>) {
   return isIntersecting;
 }
 
-// --- Komponen untuk Animasi Angka Statistik ---
 function StatItem({ value, label, icon }: { value: number, label: string, icon: React.ReactNode }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -53,7 +50,7 @@ function StatItem({ value, label, icon }: { value: number, label: string, icon: 
       const end = value;
       if (start === end) return;
 
-      const duration = 2000; // durasi animasi dalam ms
+      const duration = 2000;
       const startTime = Date.now();
 
       const animate = () => {
@@ -79,22 +76,28 @@ function StatItem({ value, label, icon }: { value: number, label: string, icon: 
   );
 }
 
-// --- Tipe Data untuk Sponsor ---
 type Sponsor = {
   name: string;
-  logoUrl: string; // Path ke logo di folder /public
-  websiteUrl: string;
+  logoUrl: string;
 };
 
-// --- DATA DUMMY: Ganti dengan data sponsor kamu ---
 const sponsors: Sponsor[] = [
-  { name: "Robosoed Wear", logoUrl: "/images/robosoedwear.png", websiteUrl: "#" },
-  { name: "Smartfren", logoUrl: "/images/smartfren.png", websiteUrl: "#" },
-  { name: "Rumah Arimbi", logoUrl: "/images/logooemah.jpg", websiteUrl: "#" },
+  { name: "Robosoed Wear", logoUrl: "/images/robosoedwear.png" },
+  { name: "Smartfren", logoUrl: "/images/smartfren.png" },
+  { name: "Rumah Arimbi", logoUrl: "/images/logooemah.jpg" },
+  { name: "Artivity", logoUrl: "/images/logo/artivity.webp" },
+  { name: "Airos", logoUrl: "/images/logo/airos.webp" },
+  { name: "Aqua", logoUrl: "/images/logo/aqua.webp" },
+  { name: "BTN", logoUrl: "/images/logo/btn.webp" },
+  { name: "Buaya Aerotech", logoUrl: "/images/logo/buaya.webp" },
+  { name: "CNC", logoUrl: "/images/logo/cnc.webp" },
+  { name: "Andalas Digital Printing", logoUrl: "/images/logo/adp.webp" },
+  { name: "CUAV", logoUrl: "/images/logo/cuav.webp" },
+  { name: "SIK", logoUrl: "/images/logo/sik.png" },
+  { name: "Invasive Space", logoUrl: "/images/logo/invasive.png" },
+  { name: "Oemah", logoUrl: "/images/logo/oemah-website.png" },
 ];
-// --- Akhir Data Dummy ---
 
-// --- Tipe Data untuk Anggota Tim ---
 type TeamMember = {
   id: number;
   name: string;
@@ -108,29 +111,121 @@ type TeamMember = {
   };
 };
 
-// --- DATA DUMMY: Ganti dengan data tim kamu ---
 const allTeamMembers: TeamMember[] = [
-  // Management Team
-  { id: 1, name: "Muhammad Rizqy Maulana Sarwono", role: "President", imageUrl: "/images/managementTeam/2.png", team: 'management', socials: { instagram: 'https://www.instagram.com/rizqysarwono13?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-  { id: 2, name: "Adhe Akbar Azanni", role: "Vice President", imageUrl: "/images/managementTeam/3.png", team: 'management', socials: { instagram: 'https://www.instagram.com/kangmas_akbar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-  { id: 3, name: "Khoirunnisaa", role: "Head of Secretary", imageUrl: "/images/managementTeam/4.png", team: 'management', socials: { instagram: 'https://www.instagram.com/niskhr_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-  { id: 4, name: "Khaerani Julieta Faestri", role: "Head of Financial Manager", imageUrl: "/images/managementTeam/7.png", team: 'management', socials: { instagram: 'https://www.instagram.com/khaeranijulieta/?utm_source=ig_web_button_share_sheet' } },
-  { id: 5, name: "Ramania Nur Alifa", role: "Head of Human Resource Development", imageUrl: "/images/managementTeam/20.png", team: 'management', socials: { instagram: 'https://www.instagram.com/rnalifaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-  { id: 6, name: "Farizza Ginna Zakkiya", role: "Head of Public Relation", imageUrl: "/images/managementTeam/47.png", team: 'management', socials: { instagram: 'https://www.instagram.com/fafakiyya/?utm_source=ig_web_button_share_sheet' } },
-  { id: 7, name: "Rizka Nur Febriana", role: "Head of Sponsorship", imageUrl: "/images/managementTeam/28.png", team: 'management', socials: { instagram: 'https://www.instagram.com/bubkcart?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-  { id: 8, name: "Amanda Jovita Ardellya", role: "Head of Creative Media", imageUrl: "/images/managementTeam/11.png", team: 'management', socials: { instagram: 'https://www.instagram.com/amndaata?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-  { id: 9, name: "Arimbi Sukma Kinanthi", role: "Head of Team Manager", imageUrl: "/images/managementTeam/36.png", team: 'management', socials: { instagram: 'https://www.instagram.com/arimbisukmaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-
-  // Technical Team
-  { id: 6, name: "Muhamad Kelvin Adiyasa", role: "Head of KRAI Blakasutha", imageUrl: "/images/kriTeams/54.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/kelvinady_/?utm_source=ig_web_button_share_sheet' } },
-  { id: 7, name: "Galuh Agung Wicaksono", role: "Head of KRSRI Satria", imageUrl: "/images/kriTeams/104.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/galuh_agung/?utm_source=ig_web_button_share_sheet' } },
-  { id: 8, name: "Rizki Nugroho Kurniawan", role: "Head of KRTMI Yudishtira", imageUrl: "/images/kriTeams/119.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/rzkink?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-  { id: 9, name: "Farhan Ibnu Fajar", role: "Head of KRTI Biantara RP", imageUrl: "/images/krtiTeams/86.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/fa.angg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
-  { id: 10, name: "Muhammad Nur Bijak Bestari", role: "Head of KRTI Biantara FW", imageUrl: "/images/krtiTeams/102.png", team: 'technical', socials: { instagram: 'https://www.instagram.com/mnurbijak?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } },
+  { 
+    id: 1, 
+    name: "Muhammad Rizqy Maulana Sarwono", 
+    role: "President", 
+    imageUrl: "/images/kadiv/2.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/rizqysarwono13?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 2, 
+    name: "Adhe Akbar Azanni", 
+    role: "Vice President", 
+    imageUrl: "/images/kadiv/3.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/kangmas_akbar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 3, 
+    name: "Khoirunnisaa", 
+    role: "Head of Secretary", 
+    imageUrl: "/images/kadiv/4.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/niskhr_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 4, 
+    name: "Khaerani Julieta Faestri", 
+    role: "Head of Financial Manager", 
+    imageUrl: "/images/kadiv/7.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/khaeranijulieta/?utm_source=ig_web_button_share_sheet' } 
+  },
+  { 
+    id: 5, 
+    name: "Ramania Nur Alifa", 
+    role: "Head of Human Resource Development", 
+    imageUrl: "/images/kadiv/20.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/rnalifaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 6, 
+    name: "Farizza Ginna Zakkiya", 
+    role: "Head of Public Relation", 
+    imageUrl: "/images/kadiv/47.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/fafakiyya/?utm_source=ig_web_button_share_sheet' } 
+  },
+  { 
+    id: 7, 
+    name: "Rizka Nur Febriana", 
+    role: "Head of Sponsorship", 
+    imageUrl: "/images/kadiv/28.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/bubkcart?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 8, 
+    name: "Amanda Jovita Ardellya", 
+    role: "Head of Creative Media", 
+    imageUrl: "/images/kadiv/11.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/amndaata?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 9, 
+    name: "Arimbi Sukma Kinanthi", 
+    role: "Head of Team Manager", 
+    imageUrl: "/images/kadiv/36.webp", 
+    team: 'management', 
+    socials: { instagram: 'https://www.instagram.com/arimbisukmaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 6, 
+    name: "Muhamad Kelvin Adiyasa", 
+    role: "Head of KRAI Blakasutha", 
+    imageUrl: "/images/kadiv/54.webp", 
+    team: 'technical', 
+    socials: { instagram: 'https://www.instagram.com/kelvinady_/?utm_source=ig_web_button_share_sheet' } 
+  },
+  { 
+    id: 7, 
+    name: "Galuh Agung Wicaksono", 
+    role: "Head of KRSRI Satria", 
+    imageUrl: "/images/kadiv/104.webp", 
+    team: 'technical', 
+    socials: { instagram: 'https://www.instagram.com/galuh_agung/?utm_source=ig_web_button_share_sheet' } 
+  },
+  { 
+    id: 8, 
+    name: "Rizki Nugroho Kurniawan", 
+    role: "Head of KRTMI Yudishtira", 
+    imageUrl: "/images/kadiv/119.webp", 
+    team: 'technical', 
+    socials: { instagram: 'https://www.instagram.com/rzkink?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 9, 
+    name: "Farhan Ibnu Fajar", 
+    role: "Head of KRTI Biantara RP", 
+    imageUrl: "/images/kadiv/86.webp", 
+    team: 'technical', 
+    socials: { instagram: 'https://www.instagram.com/fa.angg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
+  { 
+    id: 10, 
+    name: "Muhammad Nur Bijak Bestari", 
+    role: "Head of KRTI Biantara FW", 
+    imageUrl: "/images/kadiv/102.webp", 
+    team: 'technical', 
+    socials: { instagram: 'https://www.instagram.com/mnurbijak?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' } 
+  },
 ];
-// --- Akhir Data Dummy ---
 
-// --- Komponen Kartu Anggota Tim ---
 function TeamMemberCard({ member, index }: { member: TeamMember, index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -150,11 +245,8 @@ function TeamMemberCard({ member, index }: { member: TeamMember, index: number }
   return (
     <div
       ref={ref}
-      className={`relative rounded-lg overflow-hidden group aspect-[4/5]
-                  transition-all duration-500 ease-in-out
-                  ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'}
-                  ${`delay-${index}`}
-                  `}
+      className={`relative rounded-lg overflow-hidden group aspect-[4/5] transition-all duration-500 ease-in-out ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'} ${`delay-${index}`}
+      `}
     >
       <Image
         src={member.imageUrl}
@@ -163,27 +255,50 @@ function TeamMemberCard({ member, index }: { member: TeamMember, index: number }
         className="object-cover w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out transform group-hover:scale-110"
         onError={(e) => { (e.target as HTMLImageElement).src = `https://placehold.co/400x500/1f2937/ffffff?text=${member.name.split(' ')[0]}`; }}
       />
-      
-      {/* Overlay Gradasi */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
-      {/* Konten Info Anggota */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 text-white
-                      transform translate-y-1/2 group-hover:translate-y-0 
-                      opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-1/2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
         <h3 className="font-bold text-xl">{member.name}</h3>
         <p className="text-sm text-cyan-300 mb-2">{member.role}</p>
         <div className="flex items-center gap-3">
-          {member.socials?.linkedin && <a href={member.socials.linkedin} title="LinkedIn" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Linkedin size={20} /></a>}
-          {member.socials?.github && <a href={member.socials.github} title="GitHub" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Github size={20} /></a>}
-          {member.socials?.instagram && <a href={member.socials.instagram} title="Instagram" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><Instagram size={20} /></a>}
+          {member.socials?.linkedin && 
+            <a 
+              href={member.socials.linkedin} 
+              title="LinkedIn" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-cyan-400 
+              transition-colors"
+            >
+              <Linkedin size={20} />
+            </a>}
+          {member.socials?.github && 
+            <a 
+              href={member.socials.github} 
+              title="GitHub" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-cyan-400 
+              transition-colors"
+            >
+              <Github size={20} />
+            </a>}
+          {member.socials?.instagram && 
+            <a 
+              href={member.socials.instagram} 
+              title="Instagram" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-cyan-400 transition-colors"
+            >
+              <Instagram size={20} />
+            </a>}
         </div>
       </div>
     </div>
   );
 }
 
-// --- Tipe Data untuk Prestasi ---
 type Achievement = {
   id: number;
   date: string;
@@ -193,15 +308,22 @@ type Achievement = {
   imageUrl: string;
 };
 
-// --- DATA DUMMY: Ganti dengan data prestasi tim kamu ---
 const achievementsData: Achievement[] = [
+  {
+    id: 0,
+    date: "October 17-20, 2025",
+    category: "KRTI - Biantara",
+    title: "16 Besar KRTI Nasional 2025",
+    description: "Meraih posisi 16 besar dalam Kontes Robot Terbang Indonesia (KRAI) 2025.",
+    imageUrl: "/images/events/krti.jpg",
+  },
   {
     id: 1,
     date: "July 8, 2025",
     category: "KRAI - Blakasutha",
     title: "16 Besar KRAI Nasional 2025",
     description: "Meraih posisi 16 besar dalam Kontes Robot ABU Indonesia (KRAI) 2025 dengan robot Blakasutha yang lincah dan presisi.",
-    imageUrl: "/images/krai.webp",
+    imageUrl: "/images/events/krai.webp",
   },
   {
     id: 2,
@@ -209,7 +331,7 @@ const achievementsData: Achievement[] = [
     category: "KRSRI - Satria",
     title: "Lolos	Kontes Robot Nasional 2024",
     description: "Lolos dalam Kontes Robot SAR Indonesia (KRSRI) 2024 dengan robot Satria yang inovatif dan efisien.",
-    imageUrl: "/images/krsri-2024.webp",
+    imageUrl: "/images/events/krsri-2024.webp",
   },
   {
     id: 3,
@@ -217,7 +339,7 @@ const achievementsData: Achievement[] = [
     category: "KRTI - Biantara",
     title: "Lolos	Kontes Robot Terbang Nasional 2024",
     description: "Meraih posisi untuk lolos ke Kontes Robot Terbang Indonesia (KRTI) 2024 dengan robot Biantara yang terbang tinggi.",
-    imageUrl: "images/articles/robot7.webp",
+    imageUrl: "images/events/robot7.webp",
   },
   {
     id: 4,
@@ -225,38 +347,25 @@ const achievementsData: Achievement[] = [
     category: "KRTMI - Yudhistira",
     title: "16	Besar	Pada Kontes Robot Indonesia Tingkat Nasional 2023",
     description: "Berhasil masuk 16 besar dalam Kontes Robot Tematik Indonesia (KRTMI) 2023 dengan robot Yudhistira yang inovatif.",
-    imageUrl: "/images/krtmi.webp",
+    imageUrl: "/images/events/krtmi.webp",
   },
 ];
-// --- Akhir Data Dummy ---
 
-// --- Komponen Kartu Timeline ---
 function TimelineItem({ item, index }: { item: Achievement, index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIsVisible(ref);
   const isEven = index % 2 === 0;
 
   return (
-    // PERBAIKAN: Menggunakan pl-14 untuk memberi ruang bagi garis di mobile
     <div
       ref={ref}
-      className={`relative md:flex md:justify-between items-center w-full mb-12
-                  ${isEven ? 'md:flex-row-reverse' : ''}
-                  transition-all duration-1000 ease-out
-                  ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      className={`relative md:flex md:justify-between items-center w-full mb-12 ${isEven ? 'md:flex-row-reverse' : ''} transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
     >
-      {/* Spacer untuk layout desktop */}
       <div className="hidden md:block md:w-5/12"></div>
-      
-      {/* Ikon piala di garis timeline */}
-      <div className="absolute z-20 flex items-center bg-cyan-500 shadow-xl w-12 h-12 rounded-full
-                      left-0 md:left-1/2 md:-translate-x-1/2">
+      <div className="absolute z-20 flex items-center bg-cyan-500 shadow-xl w-12 h-12 rounded-full left-0 md:left-1/2 md:-translate-x-1/2">
         <Trophy className="mx-auto text-white" size={24} />
       </div>
-
-      {/* Konten Kartu */}
-      <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-xl w-full md:w-5/12 p-6 ml-6 md:ml-0
-                      transition-all duration-300 hover:shadow-cyan-500/20 hover:border-cyan-500 border border-transparent">
+      <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-xl w-full md:w-5/12 p-6 ml-6 md:ml-0 transition-all duration-300 hover:shadow-cyan-500/20 hover:border-cyan-500 border border-transparent">
         <Image
           src={item.imageUrl}
           alt={item.title}
@@ -279,22 +388,16 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Memicu animasi setelah komponen dimuat
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
-
   const [activeTab, setActiveTab] = useState<'management' | 'technical'>('management');
-
   const filteredMembers = allTeamMembers.filter(member => member.team === activeTab);
-
   return (
     <div className="min-h-screen bg-gray-900 text-white bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
       <section>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16">
-            
-            {/* Sisi Kiri: Logo */}
             <div className={`transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <Image
                 src={teamLogoPath}
@@ -306,8 +409,6 @@ export default function Home() {
                 onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/500x500/111827/ffffff?text=SRT'; }}
               />
             </div>
-
-            {/* Sisi Kanan: Teks, Statistik & Tombol CTA */}
             <div className={`text-center md:text-left transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} transition-delay-200`}>
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-400 to-blue-600">
                 Soedirman Robotic <br /> Team
@@ -315,8 +416,6 @@ export default function Home() {
               <p className="mt-4 text-gray-300 max-w-lg mx-auto md:mx-0 text-base sm:text-lg leading-relaxed">
                 Soedirman Robotic Team is a student organization at Jenderal Soedirman University which is engaged in robotics research and student development in the organization.
               </p>
-
-              {/* Statistik Kunci */}
               <div className="grid grid-cols-3 gap-4 my-10 max-w-md mx-auto md:mx-0">
                 <StatItem value={10} label="Projects Completed" icon={<Bot size={28} />} />
                 <StatItem value={5} label="Awards Won" icon={<Award size={28} />} />
@@ -325,8 +424,8 @@ export default function Home() {
               
               <div className="mt-8">
                 <a 
-                  href="/contact" // Ganti dengan path halaman kontak
-                  target="_blank" // Membuka di tab baru
+                  href="/contact"
+                  target="_blank"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-b from-cyan-300 to-blue-500 text-white font-bold rounded-lg shadow-lg shadow-cyan-500/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105"
                 >
                     Contact Us
@@ -339,8 +438,6 @@ export default function Home() {
       </section>
       <section className="py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Judul dan Subjudul */}
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">
               Our Sponsors
@@ -349,36 +446,27 @@ export default function Home() {
               We are proud to be supported by these amazing organizations who believe in our vision.
             </p>
           </div>
-
-          {/* Container Logo Sponsor Statis */}
-          <div className="flex justify-center items-center flex-wrap gap-12 sm:gap-16 lg:gap-24">
+          <Marquee 
+            speed={50} 
+            gradient={false}
+            pauseOnHover={true}
+          >
             {sponsors.map((sponsor, index) => (
-              <a
-                key={index}
-                href={sponsor.websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-                title={sponsor.name}
-              >
+              <div key={index} className="mx-10">
                 <Image
                   src={sponsor.logoUrl}
                   alt={sponsor.name}
-                  width={180} // Ukuran logo sedikit diperbesar agar lebih jelas
-                  height={90}
-                  className="object-contain h-24 w-48 filter grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out transform group-hover:scale-110"
-                  onError={(e) => { (e.target as HTMLImageElement).src = `https://placehold.co/180x90/e5e7eb/4b5563?text=${sponsor.name}`; }}
+                  width={200}
+                  height={80}
+                  className="h-20 w-auto object-contain"
                 />
-              </a>
+              </div>
             ))}
-          </div>
+          </Marquee>
         </div>
       </section>
-
       <section className="text-white py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Judul dan Subjudul */}
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">
               Our Teams
@@ -387,8 +475,6 @@ export default function Home() {
               Get to Know Our Management and Technical Teams
             </p>
           </div>
-
-          {/* Sistem Tab */}
           <div className="flex justify-center mb-12">
             <div className="bg-gray-800 p-1 rounded-lg flex gap-1">
               <button
@@ -405,21 +491,15 @@ export default function Home() {
               </button>
             </div>
           </div>
-
-          {/* Grid Kartu Anggota */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
             {filteredMembers.map((member, index) => (
               <TeamMemberCard key={member.id} member={member} index={index} />
             ))}
           </div>
-
         </div>
       </section>
-
       <section className="text-white py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Judul dan Subjudul */}
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">
               Our Achievements
@@ -428,21 +508,15 @@ export default function Home() {
               Perjalanan dan pencapaian yang membentuk kami.
             </p>
           </div>
-
-          {/* Container Timeline */}
           <div className="relative wrap overflow-hidden p-2 md:p-10 h-full">
-            {/* PERBAIKAN: Garis Vertikal yang responsif */}
             <div className="absolute border-2-2 border-cyan-500/30 h-full border
                         left-6 md:left-1/2 -translate-x-1/2"></div>
-            
             {achievementsData.map((item, index) => (
               <TimelineItem key={item.id} item={item} index={index} />
             ))}
           </div>
-
         </div>
       </section>
-
       <section className="text-white py-20 sm:py-24">
         <div className="text-center mb-16 px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 to-blue-500">

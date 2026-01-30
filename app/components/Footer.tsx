@@ -145,7 +145,7 @@ const Footer = () => {
 
         {/* Bottom Section: Copyright and Social Media */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; 2025 Soedirman Robotic Team</p>
+          <p>&copy; 2026 Soedirman Robotic Team</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="https://www.instagram.com/srtunsoed/" className="hover:text-white"><FaInstagram size={20} /></Link>
             <Link href="https://www.youtube.com/@soedirmanroboticteam" className="hover:text-white"><FaYoutube size={20} /></Link>

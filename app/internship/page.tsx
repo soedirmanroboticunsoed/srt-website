@@ -1,11 +1,9 @@
-// Menjadikan ini Client Component untuk menangani animasi dan interaksi
 'use client';
 
 import { useState, useEffect } from 'react';
 import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit } from 'lucide-react';
 import Footer from '../components/Footer';
 
-// --- DATA UNTUK ALUR PENDAFTARAN ---
 const registrationSteps = [
   {
     id: "timeline",
@@ -59,7 +57,6 @@ const registrationSteps = [
   },
 ];
 
-// --- Komponen Utama Halaman Open Recruitment ---
 export default function OpenRecruitmentPage() {
   // --- PENGATURAN UTAMA ---
   // Ganti nilai di bawah ini menjadi 'false' jika pendaftaran sudah ditutup.
@@ -72,7 +69,6 @@ export default function OpenRecruitmentPage() {
     setIsLoaded(true);
   }, []);
 
-  // --- PENGATURAN: Ganti link dan nomor kontak di bawah ini ---
   const registrationLink = "https://forms.gle/your-google-form-link";
   const contactPerson = {
       name: "Abir Nuchiyah",
@@ -94,7 +90,6 @@ export default function OpenRecruitmentPage() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] px-4 sm:px-6 lg:px-8">
-      {/* Bagian Hero (Tampilan berubah tergantung status pendaftaran) */}
       <section className='py-8 sm:py-12 text-center'>
         <div 
           className={`relative z-10 max-w-4xl mx-auto text-center transition-opacity duration-1000 ease-in ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
