@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, Clock, ArrowLeft } from 'lucide-react';
+import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, Clock, ArrowLeft, Italic } from 'lucide-react';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 
@@ -54,6 +54,7 @@ const registrationSteps = [
           <li><strong>Human Resource and Development</strong></li>
           <li><strong>Creative Media</strong></li>
           <li><strong>Sponsorship</strong></li>
+          <li><strong>Team Manager</strong></li>
           <li><strong>Kontes Robot ABU Indonesia (KRAI) </strong>Subdivisi: Mekanik, Elektronik, dan Programming</li>
           <li><strong>Kontes Robot SAR Indonesia (KRSRI) </strong>Subdivisi: Mekanik, Elektronik, dan Programming</li>
           <li><strong>Kontes Robot Tematik Indonesia (KRTMI) </strong>Subdivisi: Mekanik, Elektronik, dan Programming</li>
@@ -70,7 +71,7 @@ const registrationSteps = [
     icon: <FileText size={20} />,
     content: (
       <>
-        <p className="mb-4">Silakan download dokumen yang dibutuhkan untuk melakukan pendaftaran!</p>
+        <p className="mb-4">Silakan download dokumen yang dibutuhkan untuk melakukan pendaftaran! <strong><em>Catatan: Gunakan email Unsoed untuk mengakses!!</em></strong></p>
         <div className='flex flex-col md:flex-row items-start md:items-center w-full gap-4 mt-8'>
           <a 
             href="https://docs.google.com/document/d/1K_wF6rCFguv7d_ZWZ8kizq8Ao8y7X6d4/edit?usp=drive_link&ouid=114621677394057883206&rtpof=true&sd=true"
@@ -81,7 +82,7 @@ const registrationSteps = [
             Template CV
           </a>
           <a 
-            href="https://docs.google.com/document/d/1K_wF6rCFguv7d_ZWZ8kizq8Ao8y7X6d4/edit?usp=drive_link&ouid=114621677394057883206&rtpof=true&sd=true"
+            href="https://twb.nz/bethenextfighter"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-transparent border border-gray-600 text-gray-300 font-semibold rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-800 hover:text-white hover:border-gray-500"
@@ -98,7 +99,7 @@ const registrationSteps = [
     icon: <ClipboardEdit size={20} />,
     content: (
       <>
-        <p className="text-gray-300 mb-6">Siap untuk mendaftar? Klik tombol di bawah ini untuk mengakses formulir pendaftaran resmi!</p>
+        <p className="text-gray-300 mb-6">Siap untuk mendaftar? Klik tombol di bawah ini untuk mengakses formulir pendaftaran resmi! <strong><em>Catatan: Gunakan email Unsoed untuk mengakses!!</em></strong></p>
         <a 
           href="https://forms.gle/jbzEnQYoMxmbr5Ur7"
           target="_blank"
@@ -119,22 +120,22 @@ const registrationSteps = [
         <p className="text-gray-300 mb-6">Terdapat kesulitan saat melakukan pendaftaran? Tenang, kami siap bantu! Langsung saja chat Contact Person kami!</p>
         <div className='flex flex-col md:flex-row items-start md:items-center w-full gap-4 mt-8'>
           <a 
-          href={`https://wa.me/6282325072500`}
+          href={`https://wa.me/628989948655`}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full text-left p-4 bg-gray-900/50 rounded-lg hover:bg-gray-800 transition-colors"
         >
-          <p className="text-lg font-semibold text-white mt-1">Fahreza Adi Prabowo</p>
-          <p className="text-gray-400">+62 823 2507 2500</p>
+          <p className="text-lg font-semibold text-white mt-1">Hanif Muhamad Anam</p>
+          <p className="text-gray-400">+62 898 9948 655</p>
         </a>
         <a 
-          href={`https://wa.me/6282325072500`}
+          href={`https://wa.me/6282136154006`}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full text-left p-4 bg-gray-900/50 rounded-lg hover:bg-gray-800 transition-colors"
         >
-          <p className="text-lg font-semibold text-white mt-1">Fahreza Adi Prabowo</p>
-          <p className="text-gray-400">+62 823 2507 2500</p>
+          <p className="text-lg font-semibold text-white mt-1">Pratiwi Rahmadiana</p>
+          <p className="text-gray-400">+62 821 3615 4006</p>
         </a>
         </div>
       </>
@@ -145,7 +146,7 @@ const registrationSteps = [
 export default function OpenRecruitmentPage() {
   // --- PENGATURAN UTAMA ---
   // Ganti nilai di bawah ini menjadi 'false' jika pendaftaran sudah ditutup.
-  const isRecruitmentOpen = false;
+  const isRecruitmentOpen = true;
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState('timeline');
