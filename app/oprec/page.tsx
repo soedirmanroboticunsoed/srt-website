@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, Clock, ArrowLeft, Italic } from 'lucide-react';
+import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, Clock, ArrowLeft } from 'lucide-react';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 
