@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, Clock, ArrowLeft } from 'lucide-react';
+import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, DoorClosed, ArrowLeft } from 'lucide-react';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 
@@ -146,7 +146,7 @@ const registrationSteps = [
 export default function OpenRecruitmentPage() {
   // --- PENGATURAN UTAMA ---
   // Ganti nilai di bawah ini menjadi 'false' jika pendaftaran sudah ditutup.
-  const isRecruitmentOpen = true;
+  const isRecruitmentOpen = false;
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState('timeline');
@@ -218,16 +218,16 @@ export default function OpenRecruitmentPage() {
             // --- TAMPILAN SAAT PENDAFTARAN DITUTUP ---
             <>
               <div className="inline-block bg-blue-500/20 p-3 rounded-xl mb-6">
-                <Clock size={32} className="text-blue-300" />
+                <DoorClosed size={32} className="text-blue-300" />
               </div>
               <h3 className="max-w-2xl mx-auto text-3xl font-bold text-gray-300 leading-relaxed">
-                COMING SOON!!
+                Announcement!!
               </h3>
               <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-                Open Recruitment Staff of Soedirman Robotic Team
+                Applications are Closed!!
               </h1>
               <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
-                We are excited to announce that our open recruitment is coming soon! Stay tuned for more updates.
+                Thank you for your enthusiasm. We sincerely hope that you will get the most out of this recruitment process.
               </p>
               <div className="mt-8 max-w-xl mx-auto">
                 <Link 
