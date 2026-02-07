@@ -15,6 +15,7 @@ const registrationSteps = [
         <p className="mb-4">Berikut adalah tanggal-tanggal penting yang harus kamu perhatikan selama proses rekrutmen:</p>
         <ul className="space-y-3 list-disc list-inside text-gray-300">
           <li><strong>Open Recruitment:</strong> 1 - 6 Februari 2026</li>
+          <li><strong>Extend:</strong> 7 - 8 Februari 2026</li>
           <li><strong>Technical Meeting:</strong> 8 Februari 2026</li>
           <li><strong>Pengerjaan Misi:</strong> 8 - 11 Februari 2026</li>
           <li><strong>Screening:</strong> 12 - 15 Februari 2026</li>
@@ -146,7 +147,7 @@ const registrationSteps = [
 export default function OpenRecruitmentPage() {
   // --- PENGATURAN UTAMA ---
   // Ganti nilai di bawah ini menjadi 'false' jika pendaftaran sudah ditutup.
-  const isRecruitmentOpen = false;
+  const isRecruitmentOpen = true;
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState('timeline');
@@ -182,7 +183,10 @@ export default function OpenRecruitmentPage() {
               <div className="inline-block bg-blue-500/20 p-3 rounded-xl mb-6">
                 <UserPlus size={32} className="text-blue-300" />
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+              <h3 className="max-w-2xl mx-auto text-3xl font-bold text-white leading-relaxed">
+                Extended!!
+              </h3>
+              <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
                 Open Recruitment
               </h1>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
