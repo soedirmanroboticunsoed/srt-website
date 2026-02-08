@@ -147,7 +147,7 @@ const registrationSteps = [
 export default function OpenRecruitmentPage() {
   // --- PENGATURAN UTAMA ---
   // Ganti nilai di bawah ini menjadi 'false' jika pendaftaran sudah ditutup.
-  const isRecruitmentOpen = true;
+  const isRecruitmentOpen = false;
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState('timeline');
