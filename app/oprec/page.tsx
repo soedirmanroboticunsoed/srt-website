@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, DoorClosed, ArrowLeft } from 'lucide-react';
+import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, DoorClosed, ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 
@@ -235,11 +235,11 @@ export default function OpenRecruitmentPage() {
               </p>
               <div className="mt-8 max-w-xl mx-auto">
                 <Link 
-                  href="/"
+                  href="/oprec/missions"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-transparent border border-gray-600 text-gray-300 font-semibold rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-800 hover:text-white hover:border-gray-500"
                 >
-                  <ArrowLeft size={18} />
-                  Go to Homepage
+                  Go to Mission Page
+                  <ArrowRight size={18} />
                 </Link>
               </div>
             </>
