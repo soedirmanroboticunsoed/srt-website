@@ -156,7 +156,7 @@ const missionDatabase: Record<Division, Mission[]> = {
 const divisions = Object.keys(missionDatabase) as Division[];
 
 export default function MissionControlPage() {
-  const [activeTab, setActiveTab] = useState<Division>("KRTI-LELA");
+  const [activeTab, setActiveTab] = useState<Division>("KRAI");
 
   return (
     <div className="min-h-screen bg-gray-900 text-white bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] px-4 sm:px-6 lg:px-8">
