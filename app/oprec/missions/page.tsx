@@ -48,13 +48,13 @@ const missionDatabase: Record<Division, Mission[]> = {
       id: 'SATRIA-MK', 
       title: "Misi Subdivisi Mekanik", 
       desc: "Perhatikan dan cermati instruksi yang telah diberikan dengan baik!",
-      link: "https://docs.google.com/document/d/1fKsw69zJCc5W3a826YndiA7DrHOSZPIq/edit?usp=drive_link&ouid=114621677394057883206&rtpof=true&sd=true" 
+      link: "https://drive.google.com/file/d/1TjKpveAjWPc6uEZZEzwZhCYkaFiJUuN6/view?usp=drive_link" 
     },
     { 
       id: 'SATRIA-EL', 
       title: "Misi Subdivisi Elektronik", 
       desc: "Perhatikan dan cermati instruksi yang telah diberikan dengan baik!",
-      link: "https://docs.google.com/document/d/1IciXodXe-leO6hT3vRi6w44vZ3aPbxwY/edit?usp=drive_link&ouid=114621677394057883206&rtpof=true&sd=true" 
+      link: "https://drive.google.com/file/d/1uepLEbP2x94coyugpDBDAailArA35kJj/view?usp=drive_link" 
     },
     { 
       id: 'SATRIA-PRO', 
