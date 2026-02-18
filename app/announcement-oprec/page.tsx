@@ -15,8 +15,488 @@ interface Applicant {
 const applicants: Applicant[] = [
     { 
         id: 1, 
-        name: 'Widya Saraswati', 
+        name: 'Najwa Fadlillah', 
         division: 'Secretary', 
+        status: 'accepted' 
+    },
+    { 
+        id: 2, 
+        name: 'Farrekha Nur Azizah', 
+        division: 'Secretary', 
+        status: 'accepted' 
+    },
+    { 
+        id: 3, 
+        name: 'Nabilah', 
+        division: 'Financial Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 4, 
+        name: 'Khansa Nisrina', 
+        division: 'Financial Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 5, 
+        name: 'Selma Oktaviani', 
+        division: 'Human Resource & Development', 
+        status: 'accepted' 
+    },
+    { 
+        id: 6, 
+        name: 'Laists Syafiatun Nessa', 
+        division: 'Human Resource & Development', 
+        status: 'accepted' 
+    },
+    { 
+        id: 7, 
+        name: 'Inka Sabiya Khairani', 
+        division: 'Human Resource & Development', 
+        status: 'accepted' 
+    },
+    { 
+        id: 8, 
+        name: 'Aditya Marzuki Rahman', 
+        division: 'Human Resource & Development', 
+        status: 'accepted' 
+    },
+    { 
+        id: 9, 
+        name: 'Ganang Rizqullah Cesa', 
+        division: 'Human Resource & Development', 
+        status: 'accepted' 
+    },
+    { 
+        id: 10, 
+        name: 'Agni Sheva Raya Triyadi', 
+        division: 'Human Resource & Development', 
+        status: 'accepted' 
+    },
+    { 
+        id: 11, 
+        name: 'Fawaz Alwan Firdaus Gifalfa', 
+        division: 'Public Relation', 
+        status: 'accepted' 
+    },
+    { 
+        id: 12, 
+        name: 'Salwa Sofie Mubarok', 
+        division: 'Public Relation', 
+        status: 'accepted' 
+    },
+    { 
+        id: 20, 
+        name: 'Adam', 
+        division: 'Sponsorship', 
+        status: 'accepted' 
+    },
+    { 
+        id: 13, 
+        name: 'Farrel Ardan Turino', 
+        division: 'Public Relation', 
+        status: 'accepted' 
+    },
+    { 
+        id: 14, 
+        name: 'Anjani', 
+        division: 'Public Relation', 
+        status: 'accepted' 
+    },
+    { 
+        id: 15, 
+        name: 'Safrudin Ade Prayogo', 
+        division: 'Public Relation', 
+        status: 'accepted' 
+    },
+    { 
+        id: 16, 
+        name: 'Adellya Putrika Puspa Kinanthi', 
+        division: 'Public Relation', 
+        status: 'accepted' 
+    },
+    { 
+        id: 17, 
+        name: 'Sri Wahyu Vinanti', 
+        division: 'Public Relation', 
+        status: 'accepted' 
+    },
+    { 
+        id: 18, 
+        name: 'Mochamad Ilyas Ridho Sudarsono', 
+        division: 'Sponsorship', 
+        status: 'accepted' 
+    },
+    { 
+        id: 19, 
+        name: 'Damar Muaziz Latif', 
+        division: 'Sponsorship', 
+        status: 'accepted' 
+    },
+    { 
+        id: 21, 
+        name: 'Irma Amelia', 
+        division: 'Sponsorship', 
+        status: 'accepted' 
+    },
+    { 
+        id: 22, 
+        name: 'Desta Permana Putra', 
+        division: 'Sponsorship', 
+        status: 'accepted' 
+    },
+    { 
+        id: 23, 
+        name: 'Zuvika Dwi Yustina', 
+        division: 'Sponsorship', 
+        status: 'accepted' 
+    },
+    { 
+        id: 24, 
+        name: 'Muhammad Izna Fajri Amin', 
+        division: 'Creative Media', 
+        status: 'accepted' 
+    },
+    { 
+        id: 25, 
+        name: 'Syarif Hidayat', 
+        division: 'Creative Media', 
+        status: 'accepted' 
+    },
+    { 
+        id: 26, 
+        name: 'Sabrina Intan Nuraini', 
+        division: 'Creative Media', 
+        status: 'accepted' 
+    },
+    { 
+        id: 27, 
+        name: 'Salma Faizatul Jannah', 
+        division: 'Creative Media', 
+        status: 'accepted' 
+    },
+    { 
+        id: 28, 
+        name: 'Agiska Naila Setyawan Asyifa', 
+        division: 'Creative Media', 
+        status: 'accepted' 
+    },
+    { 
+        id: 29, 
+        name: 'Labibah Hasna Ramadhani', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 30, 
+        name: 'Annisa Nurul Islamiyanti', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 31, 
+        name: 'Nabilla Putri Andini', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 32, 
+        name: 'Nazwa Priscillia Pramesti', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 33, 
+        name: 'Shila Aika Viona Heart', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 34, 
+        name: 'Joy Keyzia Yolanda Regilia', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 35, 
+        name: 'Tessalonika Bori', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 36, 
+        name: 'Halim Raka Adji Perdana', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 37, 
+        name: 'Alya Yuniar', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 38, 
+        name: 'Glorya Natalie Kristina Sirait', 
+        division: 'Team Manager', 
+        status: 'accepted' 
+    },
+    { 
+        id: 39, 
+        name: 'Abhirama Raihan Ahwan', 
+        division: 'KRAI - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 40, 
+        name: 'Fathi Farahat', 
+        division: 'KRAI - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 41, 
+        name: 'Agil Aditya', 
+        division: 'KRAI - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 42, 
+        name: 'Firman Febriana', 
+        division: 'KRAI - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 43, 
+        name: 'Nashr Ardy Wahyono', 
+        division: 'KRAI - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 44, 
+        name: 'M. Fadjrul Nizami', 
+        division: 'KRAI - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 45, 
+        name: 'Arzaq Vincent Putra Prasetyo', 
+        division: 'KRAI - Programmer', 
+        status: 'accepted' 
+    },
+    { 
+        id: 46, 
+        name: 'Afif Nur Rahman', 
+        division: 'KRAI - Programmer', 
+        status: 'accepted' 
+    },
+    { 
+        id: 47, 
+        name: 'Derry Alantis', 
+        division: 'KRAI - Programmer', 
+        status: 'accepted' 
+    },
+    { 
+        id: 48, 
+        name: 'Mochammad Farras Ghalib Arifianto', 
+        division: 'KRSRI - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 49, 
+        name: 'Muhammad Irfan Ghani', 
+        division: 'KRSRI - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 50, 
+        name: 'Christian Andri Nugraha', 
+        division: 'KRSRI - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 51, 
+        name: 'Anisa Rahmayani Ayuningrum', 
+        division: 'KRSRI - Programmer', 
+        status: 'accepted' 
+    },
+    { 
+        id: 52, 
+        name: 'Dimas Rafif Zaidan', 
+        division: 'KRSRI - Programmer', 
+        status: 'accepted' 
+    },
+    { 
+        id: 53, 
+        name: 'Ahmad Baihaqi Shobari', 
+        division: 'KRTMI - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 54, 
+        name: 'Gyan Antoni Marbun', 
+        division: 'KRTMI - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 55, 
+        name: 'Faried Mahfuds', 
+        division: 'KRTMI - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 56, 
+        name: 'Faizal Ridha Salman', 
+        division: 'KRTMI - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 57, 
+        name: 'Apri Maulana Nurharyanto', 
+        division: 'KRTMI - Programmer', 
+        status: 'accepted' 
+    },
+    { 
+        id: 58, 
+        name: 'Muhammad Jundi Assabiq', 
+        division: 'KRTMI - Programmer', 
+        status: 'accepted' 
+    },
+    { 
+        id: 59, 
+        name: 'Bayu Pamungkas', 
+        division: 'KRTI-RP - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 60, 
+        name: 'Ridho Abdyansyah Alam', 
+        division: 'KRTI-RP - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 61, 
+        name: 'Muhammad Fakhrul Arifin', 
+        division: 'KRTI-RP - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 62, 
+        name: 'Ilham Pratama', 
+        division: 'KRTI-RP - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 63, 
+        name: 'Benedictus Alvin Wicaksono', 
+        division: 'KRTI-RP - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 64, 
+        name: 'Giri Fadhilah Idris', 
+        division: 'KRTI-RP - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 65, 
+        name: 'Felix Erza Shandika', 
+        division: 'KRTI-RP - System', 
+        status: 'accepted' 
+    },
+    { 
+        id: 66, 
+        name: 'Dean Aprilia Ningsih', 
+        division: 'KRTI-RP - System', 
+        status: 'accepted' 
+    },
+    { 
+        id: 67, 
+        name: 'Haiza Aydin Saputra ', 
+        division: 'KRTI-FW - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 68, 
+        name: 'Bramantyo Wicaksono Putra Kuswanto', 
+        division: 'KRTI-FW - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 69, 
+        name: 'Danang Puspa Winasis', 
+        division: 'KRTI-FW - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 70, 
+        name: 'Shaumy Putra Ryan', 
+        division: 'KRTI-FW - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 71, 
+        name: 'Bryan Adam Anggarkusuma', 
+        division: 'KRTI-FW - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 72, 
+        name: 'Dais Fathurohman', 
+        division: 'KRTI-FW - System', 
+        status: 'accepted' 
+    },
+    { 
+        id: 73, 
+        name: 'Nevita Rahma Hidayati', 
+        division: 'KRTI-FW - System', 
+        status: 'accepted' 
+    },
+    { 
+        id: 74, 
+        name: 'Dawud Al Awwab', 
+        division: 'KRTI-LELA - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 75, 
+        name: 'Alim Nafi Robani', 
+        division: 'KRTI-LELA - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 76, 
+        name: 'Sulthan Rasya Putrawan', 
+        division: 'KRTI-LELA - Mekanik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 77, 
+        name: 'Yaish Shoburu Sumintapura', 
+        division: 'KRTI-LELA - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 78, 
+        name: 'Anindya Regita Cahyani', 
+        division: 'KRTI-LELA - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 79, 
+        name: 'Andrian Ammar Maulana', 
+        division: 'KRTI-LELA - Elektronik', 
+        status: 'accepted' 
+    },
+    { 
+        id: 80, 
+        name: 'Gerard Roland Kusuma Sarwoko', 
+        division: 'KRTI-LELA - System', 
+        status: 'accepted' 
+    },
+    { 
+        id: 81, 
+        name: 'Dimas Adi Saputra', 
+        division: 'KRTI-LELA - System', 
         status: 'accepted' 
     },
 ];
@@ -55,13 +535,13 @@ export default function InternshipAnnouncementPage() {
   const [isSearching, setIsSearching] = useState(false);
 
   const contactPerson = {
-      name: "Laetare Clara Febrianti",
-      whatsappNumber: "6281586023404"
+      name: "Hanif Muhamad Anam",
+      whatsappNumber: "628989948655"
   };
 
   const contactPerson2 = {
-      name: "Agam Priatama",
-      whatsappNumber: "6288239699686"
+      name: "Pratiwi Rahmadiana",
+      whatsappNumber: "6282136154006"
   };
   
   const confettiCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -151,7 +631,7 @@ export default function InternshipAnnouncementPage() {
             Pengumuman Hasil Seleksi
           </h1>
           <h2 className="text-2xl sm:text-3xl font-bold mt-2">
-            Internship Soedirman Robotic Team 2025
+            Recruitment Pengurus Soedirman Robotic Team 2026
           </h2>
           <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
             Terima kasih kepada seluruh pendaftar atas antusiasme dan partisipasinya. Silakan masukkan nama lengkap Anda di bawah ini untuk melihat hasil seleksi.
@@ -201,7 +681,7 @@ export default function InternshipAnnouncementPage() {
                 <XCircle size={48} className="mx-auto text-red-400 mb-4" />
                 <h3 className="text-2xl font-bold text-red-300">Mohon Maaf</h3>
                 <p className="mt-4 text-lg text-gray-300">
-                  Anda belum lolos seleksi Internship Soedirman Robotic Team. Jangan berkecil hati, tetap semangat dan terus kembangkan potensimu!
+                  Anda belum lolos seleksi Pengurus Soedirman Robotic Team. Jangan berkecil hati, tetap semangat dan terus kembangkan potensimu!
                 </p>
                 <p className="mt-2 text-gray-400">Terima kasih banyak atas partisipasinya.</p>
               </div>
@@ -214,7 +694,7 @@ export default function InternshipAnnouncementPage() {
           <div className="bg-gray-800/50 p-8 rounded-lg border border-gray-700">
             <ul className="space-y-4 text-gray-300 list-decimal list-inside">
               <li>
-                <strong>Konfirmasi Diterima:</strong> Harap segera melakukan konfirmasi dengan menghubungi narahubung yang tertera paling lambat tanggal <strong>12 September 2025 pukul 23:59 WIB</strong>
+                <strong>Konfirmasi Diterima:</strong> Harap segera melakukan konfirmasi dengan menghubungi narahubung yang tertera paling lambat tanggal <strong>19 Februari pukul 23:59 WIB</strong>
               </li>
               <li>
                 <strong>Bergabung Grup WhatsApp:</strong> Wajib bergabung ke dalam grup WhatsApp resmi melalui tautan yang akan dikirimkan oleh narahubung.
@@ -229,7 +709,7 @@ export default function InternshipAnnouncementPage() {
                 className="block w-full text-center p-4 bg-gray-900/50 rounded-lg hover:bg-gray-800 transition-colors"
               >
                 <p className="text-lg font-semibold text-white mt-1">{contactPerson.name}</p>
-                <p className="text-gray-400">+62 815-8602-3404</p>
+                <p className="text-gray-400">+62 898 9948 655</p>
               </a>
               <a 
                 href={`https://wa.me/${contactPerson2.whatsappNumber}`}
@@ -238,7 +718,7 @@ export default function InternshipAnnouncementPage() {
                 className="block w-full text-center p-4 bg-gray-900/50 rounded-lg hover:bg-gray-800 transition-colors"
               >
                 <p className="text-lg font-semibold text-white mt-1">{contactPerson2.name}</p>
-                <p className="text-gray-400">+62 882-3969-9686</p>
+                <p className="text-gray-400">+62 821 3615 4006</p>
               </a>
             </div>
           </div>

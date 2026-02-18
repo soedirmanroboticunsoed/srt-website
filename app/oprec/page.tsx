@@ -1,9 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit, DoorClosed, ArrowRight } from 'lucide-react';
+import { FileText, UserPlus, Calendar, Users, CheckSquare, ChevronRight, MessageCircle, ClipboardEdit } from 'lucide-react';
 import Footer from '../components/Footer';
-import Link from 'next/link';
 
 const registrationSteps = [
   {
@@ -222,25 +221,27 @@ export default function OpenRecruitmentPage() {
             // --- TAMPILAN SAAT PENDAFTARAN DITUTUP ---
             <>
               <div className="inline-block bg-blue-500/20 p-3 rounded-xl mb-6">
-                <DoorClosed size={32} className="text-blue-300" />
+                <CheckSquare size={32} className="text-blue-300" />
               </div>
-              <h3 className="max-w-2xl mx-auto text-3xl font-bold text-gray-300 leading-relaxed">
-                Announcement!!
-              </h3>
-              <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-                Applications are Closed!!
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+                Pengumuman Hasil Seleksi
               </h1>
               <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
-                Thank you for your enthusiasm. We sincerely hope that you will get the most out of this recruitment process.
+                Terima kasih kepada seluruh pendaftar atas antusiasme dan partisipasinya. Proses seleksi telah selesai dan kami sangat terkesan dengan kualitas serta semangat yang ditunjukkan oleh semua calon anggota.
               </p>
-              <div className="mt-8 max-w-xl mx-auto">
-                <Link 
-                  href="/oprec/missions"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-transparent border border-gray-600 text-gray-300 font-semibold rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-800 hover:text-white hover:border-gray-500"
+              <div className="mt-8 max-w-xl mx-auto bg-white/10 backdrop-blur-sm p-4 rounded-lg text-gray-200">
+                <p>Bagi yang sudah mendaftar, silahkan klik tombol dibawah untuk melihat pengumuman hasil seleksi Pengurus Soedirman Robotic Team tahun 2026. Good luck guys!!</p>
+              </div>
+              <div className="mt-10">
+                <a 
+                  href='/announcement-oprec'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-b from-cyan-400 to-blue-600 text-white font-bold rounded-lg shadow-lg shadow-blue-500/20 transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-blue-500/30 transform hover:scale-105"
                 >
-                  Go to Mission Page
-                  <ArrowRight size={18} />
-                </Link>
+                  <ClipboardEdit size={18} />
+                  Lihat Pengumuman Hasil Seleksi
+                </a>
               </div>
             </>
           )}
